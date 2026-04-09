@@ -15,18 +15,14 @@ export default function FooterSection() {
             <div className="mx-auto max-w-5xl px-6">
 
                 {/* Logo + candidate name */}
-                <Link
-                    href="/"
-                    aria-label="go home"
-                    className="mx-auto block size-fit text-center">
-                    <Logo />
-                    <p className="mt-2 text-sm font-semibold tracking-wide">
+                <div className="text-center">
+                    <p className="text-sm font-semibold tracking-wide">
                         Michele W. Johnson
                     </p>
                     <p className="text-muted-foreground text-xs mt-1">
                         Candidate for Maryland House of Delegates · District 37-B
                     </p>
-                </Link>
+                </div>
 
                 {/* Nav links */}
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
