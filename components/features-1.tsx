@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { Settings2, Sparkles, Zap } from 'lucide-react'
+import { Heart, Users, Scale } from 'lucide-react'
 import { ReactNode } from 'react'
 
 export default function Features() {
@@ -7,60 +7,63 @@ export default function Features() {
         <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
             <div className="@container mx-auto max-w-5xl px-6">
                 <div className="text-center">
-                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built to cover your needs</h2>
-                    <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.</p>
+                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+                        Fighting for What Matters
+                    </h2>
+                    <p className="mt-4 text-muted-foreground">
+                        Family, community, and public service are the pillars of Michele's life —
+                        and the foundation of her platform.
+                    </p>
                 </div>
                 <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
+
                     <Card className="group shadow-zinc-950/5">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Zap
-                                    className="size-6"
-                                    aria-hidden
-                                />
+                                <Heart className="size-6" aria-hidden />
                             </CardDecorator>
-
-                            <h3 className="mt-6 font-medium">Customizable</h3>
+                            <h3 className="mt-6 font-medium">Families First</h3>
                         </CardHeader>
-
                         <CardContent>
-                            <p className="text-sm">Extensive customization options, allowing you to tailor every aspect to meet your specific needs.</p>
+                            <p className="text-sm">
+                                Supporting working families with access to affordable housing,
+                                quality education, and economic opportunity across the lower Eastern Shore.
+                            </p>
                         </CardContent>
                     </Card>
 
                     <Card className="group shadow-zinc-950/5">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Settings2
-                                    className="size-6"
-                                    aria-hidden
-                                />
+                                <Users className="size-6" aria-hidden />
                             </CardDecorator>
-
-                            <h3 className="mt-6 font-medium">You have full control</h3>
+                            <h3 className="mt-6 font-medium">Community Investment</h3>
                         </CardHeader>
-
                         <CardContent>
-                            <p className="mt-3 text-sm">From design elements to functionality, you have complete control to create a unique and personalized experience.</p>
+                            <p className="mt-3 text-sm">
+                                Strengthening the institutions, nonprofits, and local programs
+                                that make Talbot, Dorchester, Wicomico, and Somerset counties
+                                great places to live and work.
+                            </p>
                         </CardContent>
                     </Card>
 
                     <Card className="group shadow-zinc-950/5">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Sparkles
-                                    className="size-6"
-                                    aria-hidden
-                                />
+                                <Scale className="size-6" aria-hidden />
                             </CardDecorator>
-
-                            <h3 className="mt-6 font-medium">Powered By AI</h3>
+                            <h3 className="mt-6 font-medium">Public Service</h3>
                         </CardHeader>
-
                         <CardContent>
-                            <p className="mt-3 text-sm">Elements to functionality, you have complete control to create a unique experience.</p>
+                            <p className="mt-3 text-sm">
+                                With experience in federal government, state government, and
+                                nonprofit leadership, Michele brings real-world expertise
+                                to Annapolis — not just politics.
+                            </p>
                         </CardContent>
                     </Card>
+
                 </div>
             </div>
         </section>
@@ -73,7 +76,8 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
             aria-hidden
             className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] dark:opacity-50"
         />
-
-        <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">{children}</div>
+        <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">
+            {children}
+        </div>
     </div>
 )

@@ -25,6 +25,7 @@ export const HeroHeader = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
     return (
         <header>
             <nav
@@ -38,11 +39,14 @@ export const HeroHeader = () => {
                                 aria-label="home"
                                 className="flex items-center space-x-2">
                                 <Logo />
+                                <span className="text-sm font-semibold tracking-wide hidden sm:block">
+                                    Michele W. Johnson
+                                </span>
                             </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
-                                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+                                aria-label={menuState ? 'Close Menu' : 'Open Menu'}
                                 className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
                                 <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
                                 <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
@@ -83,24 +87,30 @@ export const HeroHeader = () => {
                                     variant="outline"
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Login</span>
+                                    <Link href="/get-involved">
+                                        <span>Get Involved</span>
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
-                                    <Link href="#">
-                                        <span>Sign Up</span>
+                                    <Link
+                                        href="https://secure.actblue.com/donate/michele-w--johnson-1"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Donate</span>
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                    <Link href="#">
-                                        <span>Get Started</span>
+                                    <Link
+                                        href="https://secure.actblue.com/donate/michele-w--johnson-1"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Donate</span>
                                     </Link>
                                 </Button>
                             </div>
