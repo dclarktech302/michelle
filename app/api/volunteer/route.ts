@@ -3,10 +3,10 @@ import { NextResponse } from 'next/server'
 import VolunteerEmail from '@/components/emails/volunteerEmail'
 import { VolunteerFormData } from '@/lib/types'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     const body: VolunteerFormData = await req.json()
     const { name, email, phone, address, city, state, zip, interests } = body
 
