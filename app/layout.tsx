@@ -18,8 +18,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michelle for MD Delegate Campaign",
-  description: "Michelle for MD Delegate Campaign, fighting for Maryland's future.",
+  title: "Michele W. Johnson for MD Delegate",
+  description: "Michele W. Johnson for Maryland House of Delegates District 37-B, fighting for Maryland's future.",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
