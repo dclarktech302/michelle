@@ -37,9 +37,8 @@ export const HeroHeader = () => {
                             <Link
                                 href="/"
                                 aria-label="home"
-                                className="flex items-center space-x-2">
-                                <Logo />
-                                <span className="text-sm font-semibold tracking-wide hidden sm:block">
+                                className="flex items-center">
+                                <span className="font-semibold tracking-tight text-foreground">
                                     Michele W. Johnson
                                 </span>
                             </Link>
