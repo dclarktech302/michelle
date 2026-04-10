@@ -13,7 +13,7 @@ export default function VolunteerEmail({
 }: VolunteerFormData) {
   return (
     <div style={{ fontFamily: 'sans-serif', maxWidth: '600px', margin: '0 auto' }}>
-      <h2 style={{ color: '#1a1a1a' }}>New Volunteer — Michele W. Johnson Campaign</h2>
+      <h2 style={{ color: '#1a1a1a' }} className="font-heading">New Volunteer — Michele W. Johnson Campaign</h2>
 
       <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '24px' }}>
         <tbody>
