@@ -15,7 +15,7 @@ export default function AboutPage() {
 
         {/* Page header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl">About Michele</h1>
+          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">About Michele</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             Family, community, and public service are the pillars of my life.
           </p>
@@ -94,7 +94,7 @@ export default function AboutPage() {
 
         {/* Timeline */}
         <div className="mb-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center">A Record of Service</h2>
+          <h2 className="text-2xl font-semibold mb-10 text-center font-heading">A Record of Service</h2>
           <div className="relative border-l-2 border-border pl-8 space-y-10 ml-4">
 
             <div className="relative">
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
         {/* District info */}
         <div className="rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold">Maryland House of Delegates · District 37-B</h2>
+          <h2 className="text-xl font-semibold font-heading">Maryland House of Delegates · District 37-B</h2>
           <p className="text-muted-foreground text-sm max-w-lg mx-auto">
             District 37-B covers Talbot, Dorchester, Wicomico, and Somerset Counties —
             communities Michele knows, loves, and is committed to serving.

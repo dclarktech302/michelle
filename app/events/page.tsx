@@ -31,7 +31,7 @@ export default function EventsPage() {
       <div className="mx-auto max-w-4xl px-6">
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl">Events</h1>
+          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Events</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             Come out and meet Michele. Every conversation matters.
           </p>
@@ -40,7 +40,7 @@ export default function EventsPage() {
         {/* Upcoming */}
         {upcoming.length > 0 ? (
           <div className="space-y-6 mb-16">
-            <h2 className="text-xl font-semibold">Upcoming Events</h2>
+            <h2 className="text-xl font-semibold font-heading">Upcoming Events</h2>
             {upcoming.map(event => (
               <div
                 key={event.id}
@@ -78,7 +78,7 @@ export default function EventsPage() {
           </div>
         ) : (
           <div className="rounded-2xl border bg-muted/30 p-10 text-center mb-16 space-y-3">
-            <h2 className="text-lg font-semibold">No upcoming events scheduled</h2>
+            <h2 className="text-lg font-semibold font-heading">No upcoming events scheduled</h2>
             <p className="text-sm text-muted-foreground max-w-sm mx-auto">
               Check back soon or follow on Facebook for the latest event announcements.
             </p>
@@ -96,7 +96,7 @@ export default function EventsPage() {
         {/* Past events */}
         {past.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-muted-foreground">Past Events</h2>
+            <h2 className="text-xl font-semibold text-muted-foreground font-heading">Past Events</h2>
             {past.map(event => (
               <div
                 key={event.id}
@@ -112,7 +112,7 @@ export default function EventsPage() {
 
         {/* Stay connected */}
         <div className="mt-16 rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold">Want to host an event?</h2>
+          <h2 className="text-xl font-semibold font-heading">Want to host an event?</h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Hosting a house party is one of the most powerful ways to support the campaign.
             Fill out the volunteer form and select "Host a house party."

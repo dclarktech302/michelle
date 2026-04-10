@@ -15,7 +15,7 @@ export default function GetInvolvedPage() {
 
         {/* Page header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl">Get Involved</h1>
+          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Get Involved</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             Real change starts with neighbors showing up for neighbors.
             Here's how you can help elect Michele W. Johnson to the
@@ -29,7 +29,7 @@ export default function GetInvolvedPage() {
           <div className="space-y-10">
 
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Ways to Help</h2>
+              <h2 className="text-xl font-semibold font-heading">Ways to Help</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex gap-3">
                   <span className="text-primary font-bold mt-0.5">→</span>
@@ -48,7 +48,7 @@ export default function GetInvolvedPage() {
 
             {/* Donate section */}
             <div className="rounded-2xl border bg-muted/30 p-6 space-y-4">
-              <h2 className="text-xl font-semibold">Donate</h2>
+              <h2 className="text-xl font-semibold font-heading">Donate</h2>
               <p className="text-sm text-muted-foreground">
                 Your contribution directly funds canvassing, yard signs,
                 and outreach across District 37-B.
@@ -70,7 +70,7 @@ export default function GetInvolvedPage() {
 
             {/* Facebook */}
             <div className="space-y-2">
-              <h2 className="text-xl font-semibold">Follow Along</h2>
+              <h2 className="text-xl font-semibold font-heading">Follow Along</h2>
               <p className="text-sm text-muted-foreground">
                 Stay up to date on events, endorsements, and campaign news.
               </p>
@@ -88,7 +88,7 @@ export default function GetInvolvedPage() {
 
           {/* Right — volunteer form */}
           <div>
-            <h2 className="text-xl font-semibold mb-6">Sign Up to Volunteer</h2>
+            <h2 className="text-xl font-semibold font-heading mb-6">Sign Up to Volunteer</h2>
             <VolunteerForm />
           </div>
 

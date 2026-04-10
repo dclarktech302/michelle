@@ -21,7 +21,7 @@ export default function IssuesPage() {
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl">Issues & Platform</h1>
+          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Issues & Platform</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             Michele's priorities for District 37-B are rooted in the real needs
             of Eastern Shore families and communities.
@@ -36,7 +36,7 @@ export default function IssuesPage() {
                   <div className="flex size-10 items-center justify-center rounded-xl border bg-muted text-primary">
                     {issue.icon && iconMap[issue.icon]}
                   </div>
-                  <h2 className="text-lg font-semibold">{issue.title}</h2>
+                  <h2 className="text-lg font-semibold font-heading">{issue.title}</h2>
                 </div>
               </CardHeader>
               <CardContent>
@@ -49,7 +49,7 @@ export default function IssuesPage() {
         </div>
 
         <div className="mt-16 rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold">Have a concern for the campaign?</h2>
+          <h2 className="text-xl font-semibold font-heading">Have a concern for the campaign?</h2>
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
             Michele wants to hear from constituents across all four counties.
             Reach out directly or follow along on Facebook.

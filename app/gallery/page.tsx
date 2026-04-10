@@ -13,7 +13,7 @@ export default function GalleryPage() {
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl">Gallery</h1>
+          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Gallery</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             On the trail across District 37-B.
           </p>
