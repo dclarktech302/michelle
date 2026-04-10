@@ -28,7 +28,7 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-sm lg:mx-0">
             <div className="overflow-hidden rounded-2xl border shadow-md">
               <Image
-                src="/images/candidate.jpg"
+                src="/images/candidate-2.webp"
                 alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
                 width={600}
                 height={750}
