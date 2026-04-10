@@ -65,7 +65,7 @@ export default function HeroSection() {
                             }}
                             className="mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 lg:top-32">
                             <Image
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
+                                src="/images/candidate-hero.jpeg"
                                 alt="background"
                                 className="hidden size-full dark:block"
                                 width="3276"
@@ -178,7 +178,7 @@ export default function HeroSection() {
                                 <div className="relative mx-auto max-w-2xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15">
                                     <Image
                                         className="w-full object-cover object-top"
-                                        src="/images/candidate.jpg"
+                                        src="/images/candidate-hero.jpeg"
                                         alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
                                         width="800"
                                         height="600"
