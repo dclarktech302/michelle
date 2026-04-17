@@ -20,7 +20,7 @@ export default function FooterSection() {
                         Michele W. Johnson
                     </p>
                     <p className="text-muted-foreground text-xs mt-1">
-                        Candidate for Maryland House of Delegates · District 37-B
+                        Candidate for Maryland House of Delegates · District 37B
                     </p>
                 </div>
 
@@ -60,7 +60,7 @@ export default function FooterSection() {
                 {/* Donation info */}
                 <div className="my-8 text-center text-sm text-muted-foreground space-y-1">
                     <p className="font-medium text-foreground">Donate by Check</p>
-                    <p>Payable to: <span className="font-medium">Friends of Michele W. Johnson 37-B</span></p>
+                    <p>Payable to: <span className="font-medium">Friends of Michele W. Johnson 37B</span></p>
                     <p>PO Box 183 · Trappe, MD 21673</p>
                 </div>
 

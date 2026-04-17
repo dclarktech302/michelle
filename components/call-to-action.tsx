@@ -13,7 +13,7 @@ export default function CallToAction() {
                             Ready to Make a Difference?
                         </h2>
                         <p className="mt-4 text-primary-foreground/80 max-w-xl mx-auto text-lg">
-                            District 37-B deserves experienced, principled leadership in Annapolis.
+                            District 37B deserves experienced, principled leadership in Annapolis.
                             Join the campaign — volunteer, donate, or spread the word.
                         </p>
 
@@ -40,7 +40,7 @@ export default function CallToAction() {
                         <p className="mt-8 text-sm text-primary-foreground/60">
                             Prefer to donate by check? Make payable to{' '}
                             <span className="font-semibold text-primary-foreground/90">
-                                Friends of Michele W. Johnson 37-B
+                                Friends of Michele W. Johnson 37B
                             </span>
                             {' '}· PO Box 183, Trappe MD 21673
                         </p>

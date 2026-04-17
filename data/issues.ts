@@ -4,7 +4,7 @@ export const issues: Issue[] = [
   {
     id: 'families-first',
     title: 'Families First',
-    body: 'Supporting working families across District 37-B with access to affordable housing, quality schools, and economic opportunity. Every family on the lower Eastern Shore deserves a fair shot.',
+    body: 'Supporting working families across District 37B with access to affordable housing, quality schools, and economic opportunity. Every family on the lower Eastern Shore deserves a fair shot.',
     icon: 'Heart',
   },
   {

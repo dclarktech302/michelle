@@ -10,7 +10,7 @@ export default function Testimonials() {
                 <RevealOnScroll variant="up">
                     <div className="relative z-10 mx-auto max-w-xl space-y-4 text-center">
                         <h2 className="font-heading text-4xl font-semibold lg:text-5xl">
-                            Voices from District 37-B
+                            Voices from District 37B
                         </h2>
                         <p className="text-muted-foreground text-lg">
                             Neighbors, community leaders, and longtime Eastern Shore residents
@@ -29,7 +29,7 @@ export default function Testimonials() {
                                         "Michele brings something rare to this race — she has actually
                                         done the work. Twenty years running nonprofits, eight years on
                                         the board of Elijah Cummings' youth program, and she still shows
-                                        up at every community meeting. District 37-B needs that kind of
+                                        up at every community meeting. District 37B needs that kind of
                                         experience in Annapolis."
                                     </p>
                                     <div className="grid grid-cols-[auto_1fr] items-center gap-3">

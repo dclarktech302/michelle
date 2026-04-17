@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Get Involved — Michele W. Johnson for Delegate',
   description:
-    'Volunteer, host a house party, request a yard sign, or donate to the Michele W. Johnson campaign for Maryland House of Delegates District 37-B.',
+    'Volunteer, host a house party, request a yard sign, or donate to the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
 }
 
 export default function GetInvolvedPage() {
@@ -51,7 +51,7 @@ export default function GetInvolvedPage() {
               <h2 className="text-xl font-semibold font-heading">Donate</h2>
               <p className="text-sm text-muted-foreground">
                 Your contribution directly funds canvassing, yard signs,
-                and outreach across District 37-B.
+                and outreach across District 37B.
               </p>
               <Button asChild size="lg" className="w-full">
                 <Link
@@ -63,7 +63,7 @@ export default function GetInvolvedPage() {
               </Button>
               <div className="text-xs text-muted-foreground space-y-1 pt-2 border-t">
                 <p className="font-medium text-foreground text-sm">Donate by check:</p>
-                <p>Payable to: Friends of Michele W. Johnson 37-B</p>
+                <p>Payable to: Friends of Michele W. Johnson 37B</p>
                 <p>PO Box 183, Trappe MD 21673</p>
               </div>
             </div>

@@ -34,7 +34,7 @@ export default function Features() {
                             </CardHeader>
                             <CardContent>
                                 <p className="text-sm text-muted-foreground leading-relaxed">
-                                    Supporting working families across District 37-B with access
+                                    Supporting working families across District 37B with access
                                     to affordable housing, quality schools, and economic opportunity.
                                     Every family on the lower Eastern Shore deserves a fair shot.
                                 </p>

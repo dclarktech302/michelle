@@ -8,7 +8,7 @@ export default function StatsSection() {
                 <RevealOnScroll>
                     <div className="relative z-10 mx-auto max-w-xl space-y-4 text-center">
                         <h2 className="font-heading text-4xl font-semibold lg:text-5xl">
-                            Rooted in District 37-B
+                            Rooted in District 37B
                         </h2>
                         <p className="text-muted-foreground text-lg">
                             Michele W. Johnson brings decades of public service, community
@@ -29,7 +29,7 @@ export default function StatsSection() {
                     <RevealOnScroll delay={150} className="space-y-3 py-6 md:py-0 md:px-8">
                         <div className="font-heading text-6xl font-bold text-primary">4</div>
                         <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
-                            Counties served in District 37-B
+                            Counties served in District 37B
                         </p>
                     </RevealOnScroll>
 

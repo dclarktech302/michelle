@@ -73,7 +73,7 @@ export default function VolunteerForm() {
         <h3 className="text-2xl font-semibold">Thank you, {form.name || 'friend'}!</h3>
         <p className="mt-3 text-muted-foreground">
           We've received your information and will be in touch soon.
-          Together we'll make District 37-B proud.
+          Together we'll make District 37B proud.
         </p>
       </div>
     )
@@ -89,11 +89,10 @@ export default function VolunteerForm() {
           {interestOptions.map(option => (
             <label
               key={option}
-              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors duration-150 ${
-                form.interests.includes(option)
+              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors duration-150 ${form.interests.includes(option)
                   ? 'border-primary bg-primary/5 text-primary font-medium'
                   : 'border-border hover:border-primary/50'
-              }`}>
+                }`}>
               <input
                 type="checkbox"
                 className="hidden"

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 export const metadata = {
   title: 'About Michele — Michele W. Johnson for Delegate',
   description:
-    'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37-B — her roots, her record, and her vision for the Eastern Shore.',
+    'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37B — her roots, her record, and her vision for the Eastern Shore.',
 }
 
 export default function AboutPage() {
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <div className="overflow-hidden rounded-2xl border shadow-md">
               <Image
                 src="/images/candidate-2.webp"
-                alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
+                alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                 width={600}
                 height={750}
                 className="w-full object-cover object-top"
@@ -150,9 +150,9 @@ export default function AboutPage() {
 
         {/* District info */}
         <div className="rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold font-heading">Maryland House of Delegates · District 37-B</h2>
+          <h2 className="text-xl font-semibold font-heading">Maryland House of Delegates · District 37B</h2>
           <p className="text-muted-foreground text-sm max-w-lg mx-auto">
-            District 37-B covers Talbot, Dorchester, Wicomico, and Somerset Counties —
+            District 37B covers Talbot, Dorchester, Wicomico, and Somerset Counties —
             communities Michele knows, loves, and is committed to serving.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">

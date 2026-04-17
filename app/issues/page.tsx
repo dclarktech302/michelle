@@ -12,7 +12,7 @@ const iconMap: Record<string, React.ReactNode> = {
 export const metadata = {
   title: 'Issues — Michele W. Johnson for Delegate',
   description:
-    'Michele W. Johnson\'s platform for Maryland House of Delegates District 37-B — families, community investment, public service, and education.',
+    'Michele W. Johnson\'s platform for Maryland House of Delegates District 37B — families, community investment, public service, and education.',
 }
 
 export default function IssuesPage() {
@@ -23,7 +23,7 @@ export default function IssuesPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Issues & Platform</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-            Michele's priorities for District 37-B are rooted in the real needs
+            Michele's priorities for District 37B are rooted in the real needs
             of Eastern Shore families and communities.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function IssuesPage() {
             Michele wants to hear from constituents across all four counties.
             Reach out directly or follow along on Facebook.
           </p>
-          
+
           <a
             href="https://www.facebook.com/share/1AvsFjomFE/"
             target="_blank"

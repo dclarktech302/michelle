@@ -14,10 +14,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Michele W. Johnson for MD House of Delegates",
-  description: "Fighting for District 37-B — Talbot, Dorchester, Wicomico, and Somerset Counties.",
+  description: "Fighting for District 37B — Talbot, Dorchester, Wicomico, and Somerset Counties.",
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
-    description: "Fighting for District 37-B.",
+    description: "Fighting for District 37B.",
     images: ["/images/og-image.jpg"],
   },
 }

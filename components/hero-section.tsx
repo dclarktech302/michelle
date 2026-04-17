@@ -107,7 +107,7 @@ export default function HeroSection() {
                                     delay={0.3}
                                     as="p"
                                     className="mx-auto mt-4 max-w-xl text-balance text-xl font-medium tracking-wide uppercase text-muted-foreground">
-                                    Candidate for Maryland House of Delegates · District 37-B
+                                    Candidate for Maryland House of Delegates · District 37B
                                 </TextEffect>
 
                                 {/* Counties */}
@@ -179,7 +179,7 @@ export default function HeroSection() {
                                     <Image
                                         className="w-full object-cover object-top"
                                         src="/images/candidate-hero.jpeg"
-                                        alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
+                                        alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                                         width="800"
                                         height="600"
                                     />
