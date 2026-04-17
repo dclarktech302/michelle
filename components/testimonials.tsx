@@ -22,7 +22,7 @@ export default function Testimonials() {
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
 
                     <RevealOnScroll variant="left" delay={0} className="sm:col-span-2 lg:row-span-2">
-                        <Card className="grid grid-rows-[auto_1fr] gap-8 sm:p-6 h-full">
+                        <Card className="h-full sm:p-6">
                             <CardContent className="h-full pt-6">
                                 <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                                     <p className="text-xl font-medium leading-relaxed">
@@ -34,17 +34,11 @@ export default function Testimonials() {
                                     </p>
                                     <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                         <Avatar className="size-12">
-                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                                                TK
-                                            </AvatarFallback>
+                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">TK</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <cite className="text-sm font-semibold not-italic">
-                                                Community Supporter
-                                            </cite>
-                                            <span className="text-muted-foreground block text-sm">
-                                                Talbot County
-                                            </span>
+                                            <cite className="text-sm font-semibold not-italic">Community Supporter</cite>
+                                            <span className="text-muted-foreground block text-sm">Talbot County</span>
                                         </div>
                                     </div>
                                 </blockquote>
@@ -63,17 +57,11 @@ export default function Testimonials() {
                                     </p>
                                     <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                         <Avatar className="size-12">
-                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                                                DR
-                                            </AvatarFallback>
+                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">DR</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <cite className="text-sm font-semibold not-italic">
-                                                Community Supporter
-                                            </cite>
-                                            <span className="text-muted-foreground block text-sm">
-                                                Dorchester County
-                                            </span>
+                                            <cite className="text-sm font-semibold not-italic">Community Supporter</cite>
+                                            <span className="text-muted-foreground block text-sm">Dorchester County</span>
                                         </div>
                                     </div>
                                 </blockquote>
@@ -91,17 +79,11 @@ export default function Testimonials() {
                                     </p>
                                     <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                         <Avatar className="size-12">
-                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                                                WC
-                                            </AvatarFallback>
+                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">WC</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <cite className="text-sm font-semibold not-italic">
-                                                Community Supporter
-                                            </cite>
-                                            <span className="text-muted-foreground block text-sm">
-                                                Wicomico County
-                                            </span>
+                                            <cite className="text-sm font-semibold not-italic">Community Supporter</cite>
+                                            <span className="text-muted-foreground block text-sm">Wicomico County</span>
                                         </div>
                                     </div>
                                 </blockquote>
@@ -119,17 +101,11 @@ export default function Testimonials() {
                                     </p>
                                     <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                         <Avatar className="size-12">
-                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                                                SM
-                                            </AvatarFallback>
+                                            <AvatarFallback className="bg-primary/10 text-primary font-semibold">SM</AvatarFallback>
                                         </Avatar>
                                         <div>
-                                            <cite className="text-sm font-semibold not-italic">
-                                                Community Supporter
-                                            </cite>
-                                            <span className="text-muted-foreground block text-sm">
-                                                Somerset County
-                                            </span>
+                                            <cite className="text-sm font-semibold not-italic">Community Supporter</cite>
+                                            <span className="text-muted-foreground block text-sm">Somerset County</span>
                                         </div>
                                     </div>
                                 </blockquote>
