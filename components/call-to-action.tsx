@@ -6,7 +6,6 @@ export default function CallToAction() {
     return (
         <section className="py-16 md:py-32 bg-primary text-primary-foreground">
             <div className="mx-auto max-w-5xl px-6">
-
                 <RevealOnScroll variant="zoom">
                     <div className="text-center">
                         <h2 className="font-heading text-balance text-4xl font-semibold lg:text-5xl text-primary-foreground">
@@ -46,7 +45,6 @@ export default function CallToAction() {
                         </p>
                     </div>
                 </RevealOnScroll>
-
             </div>
         </section>
     )
