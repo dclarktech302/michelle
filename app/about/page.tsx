@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 export const metadata = {
   title: 'About Michele — Michele W. Johnson for Delegate',
   description:
-    'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37-B — her roots, her record, and her vision for the Eastern Shore.',
+    'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
 }
 
 export default function AboutPage() {
@@ -13,23 +13,20 @@ export default function AboutPage() {
     <main className="pt-32 pb-20">
       <div className="mx-auto max-w-5xl px-6">
 
-        {/* Page header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">About Michele</h1>
+          <h1 className="font-heading text-4xl font-semibold lg:text-5xl">About Michele</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
             Family, community, and public service are the pillars of my life.
           </p>
         </div>
 
-        {/* Bio + photo */}
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] items-start mb-20">
 
-          {/* Photo */}
           <div className="mx-auto w-full max-w-sm lg:mx-0">
             <div className="overflow-hidden rounded-2xl border shadow-md">
               <Image
-                src="/images/candidate-2.webp"
-                alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
+                src="/images/candidate.jpg"
+                alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                 width={600}
                 height={750}
                 className="w-full object-cover object-top"
@@ -51,7 +48,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Bio */}
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
             <p>
               My earliest memories are joining my Dad — a U.S. Army veteran, journalist,
@@ -82,81 +78,92 @@ export default function AboutPage() {
             <p>
               Professionally, I served twenty years in nonprofit leadership — as Executive
               Director of a community leadership program and as Vice President of a statewide
-              nonprofit helping low-income Maryland students pay for college and career
+              nonprofit helping low-income Maryland students access higher education and career
               training. I also served eight years in the Federal Highway Administration and,
               since 2023, in state government.
-            </p>
-            <p className="text-foreground font-medium">
-              Warm regards,<br />Michele
             </p>
           </div>
         </div>
 
-        {/* Timeline */}
         <div className="mb-20">
-          <h2 className="text-2xl font-semibold mb-10 text-center font-heading">A Record of Service</h2>
+          <h2 className="font-heading text-2xl font-semibold mb-10 text-center">
+            A Record of Service
+          </h2>
           <div className="relative border-l-2 border-border pl-8 space-y-10 ml-4">
 
             <div className="relative">
               <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
               <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">2023 — Present</p>
-              <h3 className="font-semibold text-foreground">State Government</h3>
+              <h3 className="font-semibold text-foreground">Maryland State Government</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Serving in Maryland state government, building on decades of public service experience.
+                Serving as a Director in Maryland State Government, building on
+                decades of public service experience.
               </p>
             </div>
 
             <div className="relative">
               <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
               <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">~2014 — 2022</p>
-              <h3 className="font-semibold text-foreground">Board of Directors — Elijah Cummings Youth Program</h3>
+              <h3 className="font-semibold text-foreground">Board of Directors — Congressman Elijah Cummings' Youth Leadership Program</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Eight years of service, including two years as Board Chair, supporting youth
-                development and civic engagement.
+                Eight years of service, including two years as Board Chair, supporting
+                youth development and civic engagement.
               </p>
             </div>
 
             <div className="relative">
               <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
-              <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">~2000 — 2020</p>
-              <h3 className="font-semibold text-foreground">Nonprofit Leadership — 20 Years</h3>
+              <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">1999 — 2021</p>
+              <h3 className="font-semibold text-foreground">Nonprofit Leadership — 22 Years</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Executive Director of a community leadership program and Vice President of a
-                statewide nonprofit helping low-income Maryland students access higher education.
+                Executive Director of a community leadership program and Vice President
+                of a statewide nonprofit helping low-income Maryland students access
+                higher education and career training.
               </p>
             </div>
 
             <div className="relative">
               <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
-              <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">~2000 — 2008</p>
-              <h3 className="font-semibold text-foreground">Federal Highway Administration — 8 Years</h3>
+              <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">1991 — 1999</p>
+              <h3 className="font-semibold text-foreground">Federal Highway Administration</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Eight years in federal government service at the Federal Highway Administration.
+                Serving eight years as a Transportation Planner in the
+                Federal Highway Administration.
               </p>
             </div>
 
             <div className="relative">
               <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
               <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">Education</p>
-              <h3 className="font-semibold text-foreground">University of Maryland + University of Virginia</h3>
+              <h3 className="font-semibold text-foreground">Bachelor of Arts, Urban Studies — University of Maryland</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Bachelor's from University of Maryland. Master's in Planning from the University
-                of Virginia — completed while working full time as a first-generation college graduate.
+                First generation college graduate.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -left-[2.65rem] top-1 size-4 rounded-full border-2 border-primary bg-background" />
+              <p className="text-xs font-medium text-primary uppercase tracking-wide mb-1">Graduate Education</p>
+              <h3 className="font-semibold text-foreground">Master of Planning — University of Virginia</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Paid my own way, attending classes at night for four years
+                while working full time during the day.
               </p>
             </div>
 
           </div>
         </div>
 
-        {/* District info */}
         <div className="rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold font-heading">Maryland House of Delegates · District 37-B</h2>
+          <h2 className="font-heading text-xl font-semibold">
+            Maryland House of Delegates · District 37B
+          </h2>
           <p className="text-muted-foreground text-sm max-w-lg mx-auto">
-            District 37-B covers Talbot, Dorchester, Wicomico, and Somerset Counties —
-            communities Michele knows, loves, and is committed to serving.
+            District 37B is located in Talbot, Caroline, Dorchester, and Wicomico
+            Counties — communities Michele knows, loves, and is committed to serving.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-2">
-            {['Talbot County', 'Dorchester County', 'Wicomico County', 'Somerset County'].map(county => (
+            {['Talbot County', 'Caroline County', 'Dorchester County', 'Wicomico County'].map(county => (
               <span
                 key={county}
                 className="rounded-full border px-4 py-1.5 text-sm font-medium">

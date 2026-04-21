@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { TextEffect } from '@/components/ui/text-effect'
@@ -32,6 +31,8 @@ export default function HeroSection() {
         <>
             <HeroHeader />
             <main className="overflow-hidden">
+
+                {/* Decorative background gradients */}
                 <div
                     aria-hidden
                     className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block">
@@ -39,39 +40,21 @@ export default function HeroSection() {
                     <div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
                     <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
                 </div>
+
+                {/* Maryland color accent glows */}
+                <div aria-hidden className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+                    <div
+                        className="absolute -top-40 -right-40 size-96 rounded-full opacity-[0.06]"
+                        style={{ background: 'radial-gradient(circle, #e8b800 0%, transparent 70%)' }}
+                    />
+                    <div
+                        className="absolute top-20 -left-20 size-80 rounded-full opacity-[0.04]"
+                        style={{ background: 'radial-gradient(circle, #cc0000 0%, transparent 70%)' }}
+                    />
+                </div>
+
                 <section>
                     <div className="relative pt-24 md:pt-36">
-                        <AnimatedGroup
-                            variants={{
-                                container: {
-                                    visible: {
-                                        transition: {
-                                            delayChildren: 1,
-                                        },
-                                    },
-                                },
-                                item: {
-                                    hidden: { opacity: 0, y: 20 },
-                                    visible: {
-                                        opacity: 1,
-                                        y: 0,
-                                        transition: {
-                                            type: 'spring' as const,
-                                            bounce: 0.3,
-                                            duration: 2,
-                                        },
-                                    },
-                                },
-                            }}
-                            className="mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 lg:top-32">
-                            <Image
-                                src="/images/candidate-hero.jpeg"
-                                alt="background"
-                                className="hidden size-full dark:block"
-                                width="3276"
-                                height="4095"
-                            />
-                        </AnimatedGroup>
 
                         <div
                             aria-hidden
@@ -81,33 +64,44 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-7xl px-6">
                             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
 
-                                {/* Authority line pill */}
-                                <AnimatedGroup variants={transitionVariants}>
-                                    <div className="bg-muted mx-auto flex w-fit items-center gap-3 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <span className="text-foreground text-sm font-medium">
-                                            Paid for by Friends of Michele W. Johnson
-                                        </span>
-                                    </div>
-                                </AnimatedGroup>
-
                                 {/* Candidate name */}
                                 <TextEffect
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-semibold md:text-7xl lg:mt-10 xl:text-[5.25rem]">
+                                    className="font-heading mx-auto mt-8 max-w-4xl text-balance text-5xl font-semibold md:text-7xl lg:mt-10 xl:text-[5.25rem]">
                                     Michele W. Johnson
                                 </TextEffect>
 
-                                {/* Office + district */}
+                                {/* Office — mixed case, split lines */}
                                 <TextEffect
                                     per="line"
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     delay={0.3}
                                     as="p"
-                                    className="mx-auto mt-4 max-w-xl text-balance text-xl font-medium tracking-wide uppercase text-muted-foreground">
-                                    Candidate for Maryland House of Delegates · District 37-B
+                                    className="mx-auto mt-4 max-w-xl text-balance text-xl font-medium text-muted-foreground">
+                                    Candidate
+                                </TextEffect>
+
+                                <TextEffect
+                                    per="line"
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    delay={0.4}
+                                    as="p"
+                                    className="mx-auto max-w-xl text-balance text-xl font-medium text-muted-foreground">
+                                    Maryland House of Delegates
+                                </TextEffect>
+
+                                <TextEffect
+                                    per="line"
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    delay={0.5}
+                                    as="p"
+                                    className="mx-auto max-w-xl text-balance text-xl font-medium text-muted-foreground">
+                                    District 37B
                                 </TextEffect>
 
                                 {/* Counties */}
@@ -115,10 +109,10 @@ export default function HeroSection() {
                                     per="line"
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
-                                    delay={0.5}
+                                    delay={0.65}
                                     as="p"
                                     className="mx-auto mt-3 max-w-lg text-balance text-base text-muted-foreground">
-                                    Serving Talbot · Dorchester · Wicomico · Somerset Counties
+                                    Talbot · Caroline · Dorchester · Wicomico
                                 </TextEffect>
 
                                 {/* CTAs */}
@@ -179,7 +173,7 @@ export default function HeroSection() {
                                     <Image
                                         className="w-full object-cover object-top"
                                         src="/images/candidate-hero.jpeg"
-                                        alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37-B"
+                                        alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                                         width="800"
                                         height="600"
                                     />
