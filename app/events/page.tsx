@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Events — Michele W. Johnson for Delegate',
   description:
-    'Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37-B.',
+    'Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
 }
 
 function formatDate(dateStr: string) {
@@ -30,12 +30,9 @@ export default function EventsPage() {
     <main className="pt-32 pb-20">
       <div className="mx-auto max-w-4xl px-6">
 
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Events</h1>
-          <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-            Come out and meet Michele. Every conversation matters.
-          </p>
-        </div>
+        <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
+          Meet Michele. Every conversation matters.
+        </p>
 
         {/* Upcoming */}
         {upcoming.length > 0 ? (

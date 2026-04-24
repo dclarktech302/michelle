@@ -4,9 +4,21 @@ import { Button } from '@/components/ui/button'
 import { VolunteerFormData } from '@/lib/types'
 
 const interestOptions = [
-  'Host a house party',
-  'Request a yard sign',
-  'Volunteer',
+  {
+    id: 'house-party',
+    label: 'Host a house party',
+    description: 'Bring friends and neighbors together to meet Michele, learn about her platform, and ask questions.',
+  },
+  {
+    id: 'yard-sign',
+    label: 'Request a yard sign',
+    description: 'Show your support in Talbot, Caroline, Dorchester, or Wicomico County.',
+  },
+  {
+    id: 'volunteer',
+    label: 'Volunteer',
+    description: 'Phone banking, canvassing, event help, and more. Every hour counts.',
+  },
 ]
 
 const initialForm: VolunteerFormData = {
@@ -30,12 +42,12 @@ export default function VolunteerForm() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleInterest(interest: string) {
+  function handleInterest(label: string) {
     setForm(prev => ({
       ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest],
+      interests: prev.interests.includes(label)
+        ? prev.interests.filter(i => i !== label)
+        : [...prev.interests, label],
     }))
   }
 
@@ -70,10 +82,12 @@ export default function VolunteerForm() {
   if (status === 'success') {
     return (
       <div className="rounded-2xl border bg-muted/40 px-8 py-12 text-center">
-        <h3 className="text-2xl font-semibold">Thank you, {form.name || 'friend'}!</h3>
+        <h3 className="font-heading text-2xl font-semibold">
+          Thank you for getting involved!
+        </h3>
         <p className="mt-3 text-muted-foreground">
           We've received your information and will be in touch soon.
-          Together we'll make District 37-B proud.
+          Together we'll make District 37B proud.
         </p>
       </div>
     )
@@ -82,31 +96,41 @@ export default function VolunteerForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
 
-      {/* How to get involved */}
       <div className="space-y-3">
-        <p className="text-sm font-medium">How would you like to help? <span className="text-destructive">*</span></p>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <p className="text-sm font-medium">
+          How would you like to help?{' '}
+          <span className="text-destructive">*</span>
+        </p>
+        <div className="flex flex-col gap-3">
           {interestOptions.map(option => (
             <label
-              key={option}
-              className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors duration-150 ${
-                form.interests.includes(option)
-                  ? 'border-primary bg-primary/5 text-primary font-medium'
+              key={option.id}
+              className={`flex cursor-pointer gap-4 rounded-xl border px-4 py-3 transition-colors duration-150 ${form.interests.includes(option.label)
+                  ? 'border-primary bg-primary/5'
                   : 'border-border hover:border-primary/50'
-              }`}>
+                }`}>
               <input
                 type="checkbox"
-                className="hidden"
-                checked={form.interests.includes(option)}
-                onChange={() => handleInterest(option)}
+                className="mt-0.5 shrink-0 accent-primary"
+                checked={form.interests.includes(option.label)}
+                onChange={() => handleInterest(option.label)}
               />
-              {option}
+              <div>
+                <p className={`text-sm font-medium ${form.interests.includes(option.label)
+                    ? 'text-primary'
+                    : 'text-foreground'
+                  }`}>
+                  {option.label}
+                </p>
+                <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                  {option.description}
+                </p>
+              </div>
             </label>
           ))}
         </div>
       </div>
 
-      {/* Name */}
       <div className="space-y-2">
         <label htmlFor="name" className="text-sm font-medium">
           Full name <span className="text-destructive">*</span>
@@ -123,7 +147,6 @@ export default function VolunteerForm() {
         />
       </div>
 
-      {/* Email + Phone */}
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium">
@@ -157,7 +180,6 @@ export default function VolunteerForm() {
         </div>
       </div>
 
-      {/* Address */}
       <div className="space-y-2">
         <label htmlFor="address" className="text-sm font-medium">
           Street address <span className="text-destructive">*</span>
@@ -174,7 +196,6 @@ export default function VolunteerForm() {
         />
       </div>
 
-      {/* City / State / Zip */}
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="space-y-2">
           <label htmlFor="city" className="text-sm font-medium">
@@ -225,7 +246,6 @@ export default function VolunteerForm() {
         </div>
       </div>
 
-      {/* Optional message */}
       <div className="space-y-2">
         <label htmlFor="message" className="text-sm font-medium">
           Anything else you'd like us to know?{' '}
@@ -242,12 +262,10 @@ export default function VolunteerForm() {
         />
       </div>
 
-      {/* Error */}
       {status === 'error' && (
         <p className="text-sm text-destructive">{errorMsg}</p>
       )}
 
-      {/* Submit */}
       <Button
         type="submit"
         size="lg"
@@ -255,10 +273,6 @@ export default function VolunteerForm() {
         className="w-full">
         {status === 'sending' ? 'Submitting...' : 'Join the Campaign'}
       </Button>
-
-      <p className="text-center text-xs text-muted-foreground">
-        Paid for by Friends of Michele W. Johnson
-      </p>
 
     </form>
   )

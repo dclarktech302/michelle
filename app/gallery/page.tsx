@@ -4,7 +4,7 @@ import { galleryImages } from '@/data/gallery'
 export const metadata = {
   title: 'Gallery — Michele W. Johnson for Delegate',
   description:
-    'Photos from the Michele W. Johnson campaign for Maryland House of Delegates District 37-B.',
+    'Photos from the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
 }
 
 export default function GalleryPage() {
@@ -15,7 +15,7 @@ export default function GalleryPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-semibold lg:text-5xl font-heading">Gallery</h1>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-            On the trail across District 37-B.
+            On the trail across District 37B.
           </p>
         </div>
 

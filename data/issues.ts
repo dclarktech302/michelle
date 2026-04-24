@@ -2,27 +2,33 @@ import { Issue } from '@/lib/types'
 
 export const issues: Issue[] = [
   {
-    id: 'families-first',
-    title: 'Families First',
-    body: 'Supporting working families across District 37-B with access to affordable housing, quality schools, and economic opportunity. Every family on the lower Eastern Shore deserves a fair shot.',
+    id: 'strengthening-communities',
+    title: 'Strengthening Communities',
+    body: 'Supporting safe and welcoming neighborhoods and communities across District 37B.',
+    icon: 'Shield',
+  },
+  {
+    id: 'families-youth-seniors',
+    title: 'Champion for Families, Youth, and Seniors',
+    body: 'Supporting quality public schools, libraries, parks, higher education, child care, access to healthcare, and housing.',
     icon: 'Heart',
   },
   {
-    id: 'community-investment',
-    title: 'Community Investment',
-    body: 'Strengthening the local nonprofits, civic institutions, and community programs that make Talbot, Dorchester, Wicomico, and Somerset counties great places to live, work, and raise a family.',
+    id: 'economic-opportunity',
+    title: 'Creating Economic Opportunity',
+    body: 'Empowering small local businesses and farmers; supporting heritage tourism, leveraging the new hospital, and creating well paying jobs of the future.',
+    icon: 'TrendingUp',
+  },
+  {
+    id: 'environment',
+    title: 'Protecting our Environment For Future Generations',
+    body: 'Prioritizing clean air, clean water, flood protection, and public water access.',
+    icon: 'Leaf',
+  },
+  {
+    id: 'public-servants',
+    title: 'Supporting our Public Servants',
+    body: 'Creating opportunities that enable our educators, healthcare workers, public safety workers, fire and rescue workers, and local government employees to live where they work.',
     icon: 'Users',
-  },
-  {
-    id: 'public-service',
-    title: 'Principled Public Service',
-    body: 'Bringing twenty years of nonprofit leadership, federal government experience, and state government service to Annapolis — not just politics, but real expertise in getting things done.',
-    icon: 'Scale',
-  },
-  {
-    id: 'education',
-    title: 'Education & Workforce',
-    body: `As a first-generation college graduate who paid her own way through a Master's degree, Michele understands what it takes. She is committed to expanding access to higher education and career training for every Maryland student regardless of income.`,
-    icon: 'GraduationCap',
   },
 ]
