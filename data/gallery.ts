@@ -13,10 +13,4 @@ export const galleryImages: GalleryImage[] = [
     width: 800,
     height: 600,
   },
-  {
-    src: '/images/candidate-3.webp',
-    alt: 'Michele at a community event',
-    width: 800,
-    height: 600,
-  },
 ]
