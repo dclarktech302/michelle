@@ -17,7 +17,7 @@ const platforms = [
   {
     icon: <TrendingUp className="size-6" aria-hidden />,
     title: "Creating Economic Opportunity",
-    body: "Empowering small local businesses and farmers; supporting heritage tourism, leveraging the new hospital, and creating well paying jobs of the future.",
+    body: "Empowering small local businesses, watermen, and farmers; supporting heritage tourism, leveraging Chesapeake College and the new hospital; and creating well paying jobs of the future.",
   },
   {
     icon: <Leaf className="size-6" aria-hidden />,
