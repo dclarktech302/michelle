@@ -22,7 +22,7 @@ const platforms = [
   {
     icon: <Leaf className="size-6" aria-hidden />,
     title: "Protecting our Environment For Future Generations",
-    body: "Prioritizing clean air, clean water, flood protection, and public water access.",
+    body: "Countering climate change, and prioritizing clean air, clean water, flood protection, and public water access.",
   },
   {
     icon: <Users className="size-6" aria-hidden />,

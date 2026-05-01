@@ -22,7 +22,7 @@ export const issues: Issue[] = [
   {
     id: "environment",
     title: "Protecting our Environment For Future Generations",
-    body: "Prioritizing clean air, clean water, flood protection, and public water access.",
+    body: "Countering climate change, and prioritizing clean air, clean water, flood protection, and public water access.",
     icon: "Leaf",
   },
   {
