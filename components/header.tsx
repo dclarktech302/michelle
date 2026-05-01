@@ -29,6 +29,11 @@ const FacebookIcon = () => (
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
+    const [isMounted, setIsMounted] = React.useState(false)
+
+    React.useEffect(() => {
+        setIsMounted(true)
+    }, [])
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -124,7 +129,8 @@ export const HeroHeader = () => {
 
                     {/* Mobile menu dropdown */}
                     <div className={cn(
-                        'lg:hidden overflow-hidden transition-all duration-300',
+                        'lg:hidden overflow-hidden bg-background border-t border-border',
+                        isMounted && 'transition-all duration-300',
                         menuState ? 'max-h-screen pb-6' : 'max-h-0'
                     )}>
                         <ul className="space-y-4 text-base border-t pt-4 mb-6">
