@@ -14,7 +14,7 @@ export const galleryImages: GalleryImage[] = [
     height: 600,
   },
   {
-    src: "/images/oxford-day-group.webp",
+    src: "/images/oxford-day.webp",
     alt: "Michele W. Johnson at Oxford Day with community members",
     width: 1200,
     height: 800,
