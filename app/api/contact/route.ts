@@ -18,7 +18,7 @@ export async function POST(req: Request) {
 
         const { data, error } = await resend.emails.send({
             from: 'campaign@michelewjohnson.com',
-            to: 'FriendsOfMicheleWJohnson37B@gmail.com',
+            to: process.env.CONTACT_EMAIL!,
             replyTo: email,
             subject: `Campaign message from ${name}`,
             react: ContactEmail(body),
