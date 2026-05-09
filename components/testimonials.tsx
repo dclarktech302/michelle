@@ -140,11 +140,6 @@ export default function Testimonials() {
             </Card>
           </RevealOnScroll>
         </div>
-
-        <p className="text-center text-xs text-muted-foreground">
-          * Placeholder quotes — replace with real supporter testimonials before
-          launch.
-        </p>
       </div>
     </section>
   );
