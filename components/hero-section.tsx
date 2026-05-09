@@ -176,6 +176,7 @@ export default function HeroSection() {
                                         alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                                         width="800"
                                         height="600"
+                                        priority
                                     />
                                 </div>
                             </div>
