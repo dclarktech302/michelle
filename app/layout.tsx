@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
   title: "Michele W. Johnson for MD House of Delegates",
   description:
-    "Fighting for District 37B — Talbot, Dorchester, Wicomico, and Somerset Counties.",
+    "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
     description: "Fighting for District 37B.",
