@@ -19,4 +19,46 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
   },
+  {
+    src: "/images/johnson-moore.webp",
+    alt: "Michele W. Johnson with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/moore-miller.webp",
+    alt: "Michele W. Johnson with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/mental-health-now.webp",
+    alt: "Michele W. Johnson at Oxford Day with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/moms-demand-action.webp",
+    alt: "Michele W. Johnson at Oxford Day with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/MCEA-Apple-4cp-educatorRecommended-01.webp",
+    alt: "Michele W. Johnson at Oxford Day with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/MCEA-Apple-4cp-teacherRecommended-01.webp",
+    alt: "Michele W. Johnson at Oxford Day with community members",
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: "/images/vote-blue-white-bg.webp",
+    alt: "Michele W. Johnson at Oxford Day with community members",
+    width: 1200,
+    height: 800,
+  },
 ];
