@@ -154,6 +154,34 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Endorsements */}
+        <div className="mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-8">
+          <h2 className="font-heading text-xl font-semibold mb-6">Endorsements</h2>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/images/MCEA-Apple-4cp-educatorRecommended-01.webp"
+              alt="MSEA Educator Recommended"
+              width={80}
+              height={80}
+              className="object-contain shrink-0"
+            />
+            <div>
+              <Link
+                href="https://www.marylandeducators.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground hover:text-primary transition-colors duration-150">
+                Maryland State Education Association
+              </Link>
+              <p className="text-sm text-muted-foreground mt-1">
+                Endorsed for the 2026 election cycle based on the recommendation
+                of the Dorchester Educators and the Talbot County Education
+                Association. MSEA represents educators across Maryland.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
           <h2 className="font-heading text-xl font-semibold">
             Maryland House of Delegates · District 37B
