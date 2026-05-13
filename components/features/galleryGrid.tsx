@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Masonry from 'react-masonry-css'
 import Lightbox from 'yet-another-react-lightbox'
+import Zoom from 'yet-another-react-lightbox/plugins/zoom'
 import 'yet-another-react-lightbox/styles.css'
 import { GalleryImage } from '@/lib/types'
 
@@ -46,6 +47,18 @@ export default function GalleryGrid({ images, columns = 3 }: GalleryGridProps) {
         close={() => setOpen(false)}
         index={index}
         slides={images.map(img => ({ src: img.src, alt: img.alt }))}
+        plugins={[Zoom]}
+        zoom={{
+          maxZoomPixelRatio: 3,
+          zoomInMultiplier: 2,
+          doubleTapDelay: 300,
+          doubleClickDelay: 300,
+          doubleClickMaxStops: 2,
+          keyboardMoveDistance: 50,
+          wheelZoomDistanceFactor: 100,
+          pinchZoomDistanceFactor: 100,
+          scrollToZoom: true,
+        }}
       />
     </>
   )
