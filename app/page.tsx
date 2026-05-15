@@ -3,6 +3,7 @@ import Stats from "@/components/stats";
 import Testimonials from "@/components/testimonials";
 import CallToAction from "@/components/call-to-action";
 import Features from "@/components/features-1";
+import Endorsements from "@/components/endorsements";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
     <HeroSection />
     <Stats />
     <Features />
+    <Endorsements />
     <Testimonials />
     <CallToAction />
    </>
