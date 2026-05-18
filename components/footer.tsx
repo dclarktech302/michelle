@@ -4,6 +4,7 @@ import { Button } from './ui/button'
 const links = [
     { title: 'About', href: '/about' },
     { title: 'Issues', href: '/issues' },
+    { title: 'Endorsements', href: '/endorsements' },
     { title: 'Events', href: '/events' },
     { title: 'Gallery', href: '/gallery' },
     { title: 'Get Involved', href: '/get-involved' },
