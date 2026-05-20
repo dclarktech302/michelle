@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { HeroHeader } from '@/components/header'
@@ -37,4 +37,10 @@ export default function RootLayout({
       </body>
     </html>
   )
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // No maximumScale or userScalable — allows pinch-to-zoom
 }
