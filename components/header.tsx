@@ -90,12 +90,12 @@ export const HeroHeader = () => {
                                 size="sm"
                                 className="px-2"
                                 aria-label="Follow on Facebook">
-                                <Link
+                                <a
                                     href="https://www.facebook.com/share/1AvsFjomFE/"
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     <FacebookIcon />
-                                </Link>
+                                </a>
                             </Button>
 
                             <Button
@@ -109,12 +109,12 @@ export const HeroHeader = () => {
                             </Button>
 
                             <Button asChild size="sm">
-                                <Link
+                                <a
                                     href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     Donate
-                                </Link>
+                                </a>
                             </Button>
                         </div>
 
@@ -154,14 +154,14 @@ export const HeroHeader = () => {
                         </ul>
                         <div className="flex flex-col gap-3">
                             <Button asChild variant="outline" size="sm">
-                                <Link
+                                <a
                                     href="https://www.facebook.com/share/1AvsFjomFE/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMenuState(false)}>
                                     <FacebookIcon />
                                     <span className="ml-2">Follow on Facebook</span>
-                                </Link>
+                                </a>
                             </Button>
                             <Button asChild variant="outline" size="sm">
                                 <Link
@@ -171,13 +171,13 @@ export const HeroHeader = () => {
                                 </Link>
                             </Button>
                             <Button asChild size="sm">
-                                <Link
+                                <a
                                     href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMenuState(false)}>
                                     Donate
-                                </Link>
+                                </a>
                             </Button>
                         </div>
                     </div>

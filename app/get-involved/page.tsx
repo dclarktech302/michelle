@@ -64,12 +64,12 @@ export default function GetInvolvedPage() {
                 and outreach across District 37B.
               </p>
               <Button asChild size="lg" className="w-full">
-                <Link
+                <a
                   href="https://secure.actblue.com/donate/michele-w--johnson-1"
                   target="_blank"
                   rel="noopener noreferrer">
                   Donate Now via ActBlue
-                </Link>
+                </a>
               </Button>
               <div className="text-xs text-muted-foreground space-y-1 pt-2 border-t">
                 <p className="font-medium text-foreground text-sm">Donate by check</p>
@@ -84,12 +84,12 @@ export default function GetInvolvedPage() {
                 Stay up to date on events, endorsements, and campaign news.
               </p>
               <Button asChild variant="outline" size="sm">
-                <Link
+                <a
                   href="https://www.facebook.com/share/1AvsFjomFE/"
                   target="_blank"
                   rel="noopener noreferrer">
                   Follow on Facebook
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

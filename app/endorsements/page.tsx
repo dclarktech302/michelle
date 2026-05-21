@@ -38,13 +38,13 @@ export default function EndorsementsPage() {
           <RevealOnScroll variant="left" delay={0}>
             <Card className="rounded-2xl border shadow-sm overflow-hidden">
               <CardContent className="p-0">
-                <div className="grid lg:grid-cols-[1fr_2fr]">
-                  <div className="relative min-h-[280px]">
+                <div className="grid sm:grid-cols-[260px_1fr]">
+                  <div className="relative min-h-[260px] overflow-hidden group/img">
                     <Image
                       src="/images/johnson-moore.webp"
                       alt="Michele W. Johnson with Governor Wes Moore"
                       fill
-                      className="object-cover object-top"
+                      className="object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
                     />
                   </div>
                   <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -54,9 +54,16 @@ export default function EndorsementsPage() {
                     <h2 className="font-heading text-2xl font-semibold mb-1">
                       Governor Wes Moore
                     </h2>
-                    <p className="text-muted-foreground text-sm mb-5">
+                    <p className="text-muted-foreground text-sm mb-1">
                       Governor of Maryland
                     </p>
+                    <a
+                      href="https://wesmoore.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mb-5">
+                      wesmoore.com <ExternalLink className="size-3" />
+                    </a>
                     <blockquote className="border-l-2 border-primary/30 pl-4 text-muted-foreground italic leading-relaxed text-sm">
                       "Governor Moore has endorsed Michele W. Johnson for
                       Maryland House of Delegates District 37B in the 2026
@@ -70,19 +77,19 @@ export default function EndorsementsPage() {
 
           {/* MSEA */}
           <RevealOnScroll variant="right" delay={100}>
-            <Card className="rounded-2xl border shadow-sm">
-              <CardContent className="p-8 md:p-10">
-                <div className="flex flex-col sm:flex-row gap-6 sm:items-start">
-                  <div className="shrink-0 flex items-start justify-center sm:justify-start">
+            <Card className="rounded-2xl border shadow-sm overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid sm:grid-cols-[260px_1fr]">
+                  <div className="min-h-[260px] bg-muted/30 flex items-center justify-center overflow-hidden group/img">
                     <Image
                       src="/images/MCEA-Apple-4cp-educatorRecommended-01.webp"
                       alt="MSEA Educator Recommended"
-                      width={100}
-                      height={100}
-                      className="object-contain"
+                      width={140}
+                      height={140}
+                      className="object-contain transition-transform duration-300 group-hover/img:scale-110"
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
                     <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
                       Endorsed By
                     </p>
@@ -92,13 +99,13 @@ export default function EndorsementsPage() {
                     <p className="text-muted-foreground text-sm mb-1">
                       2026 Election Cycle · Educator Recommended
                     </p>
-                    <Link
+                    <a
                       href="https://marylandeducators.org/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-xs text-primary hover:underline mb-5">
                       marylandeducators.org <ExternalLink className="size-3" />
-                    </Link>
+                    </a>
                     <blockquote className="border-l-2 border-primary/30 pl-4 text-muted-foreground italic leading-relaxed text-sm">
                       "Based on the recommendation of the Dorchester Educators
                       and the Talbot County Education Association, the Maryland

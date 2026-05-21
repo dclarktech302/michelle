@@ -8,14 +8,14 @@ import CallToAction from "@/components/call-to-action";
 
 export default function Home() {
   return (
-   <>
-    <HeroSection />
-    <Stats />
-    <Endorsements />
-    <Features />
-    <EndorsementsCta />
-    <Testimonials />
-    <CallToAction />
-   </>
+    <>
+      <HeroSection />
+      <Stats />
+      {/* <Endorsements /> */}
+      <Features />
+      <EndorsementsCta />
+      <Testimonials />
+      <CallToAction />
+    </>
   );
 }

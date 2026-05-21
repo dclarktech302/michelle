@@ -36,7 +36,7 @@ export default function FooterSection() {
                 </div>
 
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-                    <Link
+                    <a
                         href="https://www.facebook.com/share/1AvsFjomFE/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -51,18 +51,18 @@ export default function FooterSection() {
                                 d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
                             />
                         </svg>
-                    </Link>
+                    </a>
                 </div>
 
                 <div className="my-8 text-center text-sm text-muted-foreground space-y-3">
                     <p className="font-medium text-foreground">Support the Campaign</p>
                     <Button asChild size="sm" className="w-full max-w-xs mx-auto flex justify-center">
-                        <Link
+                        <a
                             href="https://secure.actblue.com/donate/michele-w--johnson-1"
                             target="_blank"
                             rel="noopener noreferrer">
                             Donate Now via ActBlue
-                        </Link>
+                        </a>
                     </Button>
                     <div className="space-y-1 pt-2">
                         <p className="font-medium text-foreground text-sm">Donate by check</p>
