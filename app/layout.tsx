@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { HeroHeader } from '@/components/header'
 import Footer from '@/components/footer'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <HeroHeader />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
