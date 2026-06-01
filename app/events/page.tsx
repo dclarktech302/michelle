@@ -2,6 +2,7 @@ import { events } from '@/data/events'
 import { CalendarDays, MapPin, Clock, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Events — Michele W. Johnson for Delegate',
@@ -28,6 +29,39 @@ export default function EventsPage() {
 
   return (
     <main className="pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Meet and Greet for Michele Johnson",
+            "startDate": "2026-06-06T12:00:00-04:00",
+            "endDate": "2026-06-06T14:00:00-04:00",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+              "@type": "Place",
+              "name": "Waters Edge Museum",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "101 Mill St.",
+                "addressLocality": "Oxford",
+                "addressRegion": "MD",
+                "postalCode": "21654",
+                "addressCountry": "US"
+              }
+            },
+            "description": "Join Michele at the Waters Edge Museum in Oxford for an in-person meet and greet. Come learn about her platform, ask questions, and show your support for District 37B.",
+            "organizer": {
+              "@type": "Organization",
+              "name": "Friends of Michele W. Johnson 37B",
+              "url": "https://www.michelewjohnson.com"
+            },
+            "image": "https://www.michelewjohnson.com/images/0606-event.png"
+          })
+        }}
+      />
       <div className="mx-auto max-w-4xl px-6">
 
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
@@ -59,6 +93,17 @@ export default function EventsPage() {
                 </div>
                 {event.description && (
                   <p className="text-sm text-muted-foreground">{event.description}</p>
+                )}
+                {event.flyer && (
+                  <div className="mt-4 overflow-hidden rounded-xl border">
+                    <Image
+                      src={event.flyer}
+                      alt={`${event.title} flyer`}
+                      width={600}
+                      height={800}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 )}
                 {event.rsvpUrl && (
                   <Button asChild size="sm" variant="outline">
@@ -102,6 +147,17 @@ export default function EventsPage() {
                 <p className="text-sm text-muted-foreground mt-1">
                   {formatDate(event.date)} · {event.location}
                 </p>
+                {event.flyer && (
+                  <div className="mt-3 overflow-hidden rounded-xl border opacity-60">
+                    <Image
+                      src={event.flyer}
+                      alt={`${event.title} flyer`}
+                      width={400}
+                      height={533}
+                      className="w-full h-auto max-w-xs"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>

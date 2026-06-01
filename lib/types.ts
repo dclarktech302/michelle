@@ -25,6 +25,8 @@ export interface Event {
   address: string
   description?: string
   rsvpUrl?: string
+  flyer?: string
+  county?: string
 }
 
 export interface Issue {

@@ -37,4 +37,10 @@ export const galleryImages: GalleryImage[] = [
     width: 1200,
     height: 800,
   },
+  {
+    src: '/images/candidate-hero.jpeg',
+    alt: 'Michele W. Johnson speaking at a community event',
+    width: 800,
+    height: 600,
+  },
 ]

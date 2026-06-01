@@ -18,8 +18,15 @@ export const metadata: Metadata = {
     "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
-    description: "Fighting for District 37B.",
+    description: "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
     url: '/',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Michele W. Johnson for MD House of Delegates",
+    description: "Fighting for District 37B.",
+    images: ['/images/og-image.jpg'],
   },
 };
 
