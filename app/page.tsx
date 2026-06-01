@@ -1,6 +1,5 @@
 import HeroSection from "@/components/hero-section";
 import Stats from "@/components/stats";
-import Endorsements from "@/components/endorsements";
 import Features from "@/components/features-1";
 import EndorsementsCta from "@/components/endorsements-cta";
 import Testimonials from "@/components/testimonials";
@@ -11,7 +10,6 @@ export default function Home() {
     <>
       <HeroSection />
       <Stats />
-      {/* <Endorsements /> */}
       <Features />
       <EndorsementsCta />
       <Testimonials />

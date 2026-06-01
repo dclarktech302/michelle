@@ -34,47 +34,6 @@ export default function EndorsementsPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6 space-y-10">
 
-          {/* Governor Moore */}
-          <RevealOnScroll variant="left" delay={0}>
-            <Card className="rounded-2xl border shadow-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid sm:grid-cols-[260px_1fr]">
-                  <div className="relative min-h-[260px] overflow-hidden group/img">
-                    <Image
-                      src="/images/johnson-moore.webp"
-                      alt="Michele W. Johnson with Governor Wes Moore"
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
-                    />
-                  </div>
-                  <div className="p-8 md:p-10 flex flex-col justify-center">
-                    <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
-                      Endorsed By
-                    </p>
-                    <h2 className="font-heading text-2xl font-semibold mb-1">
-                      Governor Wes Moore
-                    </h2>
-                    <p className="text-muted-foreground text-sm mb-1">
-                      Governor of Maryland
-                    </p>
-                    <a
-                      href="https://wesmoore.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mb-5">
-                      wesmoore.com <ExternalLink className="size-3" />
-                    </a>
-                    <blockquote className="border-l-2 border-primary/30 pl-4 text-muted-foreground italic leading-relaxed text-sm">
-                      "Governor Moore has endorsed Michele W. Johnson for
-                      Maryland House of Delegates District 37B in the 2026
-                      election cycle."
-                    </blockquote>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealOnScroll>
-
           {/* MSEA */}
           <RevealOnScroll variant="right" delay={100}>
             <Card className="rounded-2xl border shadow-sm overflow-hidden">
