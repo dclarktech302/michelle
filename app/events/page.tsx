@@ -62,12 +62,12 @@ export default function EventsPage() {
                 )}
                 {event.rsvpUrl && (
                   <Button asChild size="sm" variant="outline">
-                    <Link
+                    <a
                       href={event.rsvpUrl}
                       target="_blank"
                       rel="noopener noreferrer">
                       RSVP <ExternalLink className="ml-2 size-3" />
-                    </Link>
+                    </a>
                   </Button>
                 )}
               </div>
@@ -80,12 +80,12 @@ export default function EventsPage() {
               Check back soon or follow on Facebook for the latest event announcements.
             </p>
             <Button asChild variant="outline" size="sm">
-              <Link
+              <a
                 href="https://www.facebook.com/share/1AvsFjomFE/"
                 target="_blank"
                 rel="noopener noreferrer">
                 Follow on Facebook
-              </Link>
+              </a>
             </Button>
           </div>
         )}

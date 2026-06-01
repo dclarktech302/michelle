@@ -144,12 +144,12 @@ export default function HeroSection() {
                                         size="lg"
                                         variant="ghost"
                                         className="h-10.5 rounded-xl px-6">
-                                        <Link
+                                        <a
                                             href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                             target="_blank"
                                             rel="noopener noreferrer">
                                             <span className="text-nowrap">Donate Now</span>
-                                        </Link>
+                                        </a>
                                     </Button>
                                 </AnimatedGroup>
                             </div>

@@ -1,47 +1,45 @@
-import Image from 'next/image'
-import RevealOnScroll from '@/components/features/RevealOnScroll'
-import Link from 'next/link'
+import RevealOnScroll from "@/components/features/RevealOnScroll";
+import { Card, CardContent } from "@/components/ui/card";
+
+const endorsements = [
+    {
+        name: "Governor Wes Moore",
+        title: "Governor of Maryland",
+        initials: "WM",
+    },
+];
 
 export default function Endorsements() {
     return (
-        <section className="border-y border-border bg-muted/20 py-8">
+        <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl px-6">
                 <RevealOnScroll variant="up">
-                    <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12">
-
-                        {/* Label */}
-                        <p className="text-xs font-bold tracking-[0.18em] text-muted-foreground uppercase shrink-0">
+                    <div className="text-center mb-12">
+                        <h2 className="font-heading text-balance text-4xl font-semibold lg:text-5xl">
                             Endorsed By
+                        </h2>
+                        <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+                            Leaders across Maryland are standing with Michele.
                         </p>
-
-                        <div className="h-px w-full bg-border sm:hidden" />
-
-                        {/* MSEA */}
-                        <div className="flex items-center gap-4">
-                            <Image
-                                src="/images/MCEA-Apple-4cp-educatorRecommended-01.webp"
-                                alt="MSEA Educator Recommended"
-                                width={64}
-                                height={64}
-                                className="object-contain shrink-0"
-                            />
-                            <div>
-                                <Link
-                                    href="https://www.marylandeducators.org"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm font-semibold text-foreground hover:text-primary transition-colors duration-150 leading-tight">
-                                    Maryland State Education Association
-                                </Link>
-                                <p className="text-xs text-muted-foreground mt-0.5">
-                                    2026 Election Cycle · Educator Recommended
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </RevealOnScroll>
+
+                <div className="flex flex-wrap justify-center gap-6">
+                    {endorsements.map((e, i) => (
+                        <RevealOnScroll key={e.name} variant="scale" delay={i * 100}>
+                            <Card className="w-64 text-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+                                <CardContent className="pt-8 pb-6 px-6">
+                                    <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-xl font-heading transition-transform duration-300 hover:scale-110">
+                                        {e.initials}
+                                    </div>
+                                    <p className="font-semibold text-base">{e.name}</p>
+                                    <p className="text-muted-foreground text-sm mt-1">{e.title}</p>
+                                </CardContent>
+                            </Card>
+                        </RevealOnScroll>
+                    ))}
+                </div>
             </div>
         </section>
-    )
+    );
 }

@@ -35,12 +35,12 @@ export default function AboutPage() {
             </div>
             <div className="mt-4 space-y-3">
               <Button asChild size="lg" className="w-full">
-                <Link
+                <a
                   href="https://secure.actblue.com/donate/michele-w--johnson-1"
                   target="_blank"
                   rel="noopener noreferrer">
                   Donate to the Campaign
-                </Link>
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full">
                 <Link href="/get-involved">Get Involved</Link>
@@ -166,13 +166,13 @@ export default function AboutPage() {
               className="object-contain shrink-0"
             />
             <div>
-              <Link
+              <a
                 href="https://www.marylandeducators.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-foreground hover:text-primary transition-colors duration-150">
                 Maryland State Education Association
-              </Link>
+              </a>
               <p className="text-sm text-muted-foreground mt-1">
                 Endorsed for the 2026 election cycle based on the recommendation
                 of the Dorchester Educators and the Talbot County Education
