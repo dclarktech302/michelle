@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { HeroHeader } from '@/components/header'
 import Footer from '@/components/footer'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({
@@ -18,8 +20,15 @@ export const metadata: Metadata = {
     "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
-    description: "Fighting for District 37B.",
+    description: "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
     url: '/',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Michele W. Johnson for MD House of Delegates",
+    description: "Fighting for District 37B.",
+    images: ['/images/og-image.jpg'],
   },
 };
 
@@ -34,6 +43,8 @@ export default function RootLayout({
         <HeroHeader />
         <main>{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
