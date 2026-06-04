@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 const menuItems = [
     { name: 'About', href: '/about' },
     { name: 'Issues', href: '/issues' },
+    { name: 'Endorsements', href: '/endorsements' },
     { name: 'Events', href: '/events' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Get Involved', href: '/get-involved' },
@@ -89,12 +90,12 @@ export const HeroHeader = () => {
                                 size="sm"
                                 className="px-2"
                                 aria-label="Follow on Facebook">
-                                <Link
+                                <a
                                     href="https://www.facebook.com/share/1AvsFjomFE/"
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     <FacebookIcon />
-                                </Link>
+                                </a>
                             </Button>
 
                             <Button
@@ -108,12 +109,12 @@ export const HeroHeader = () => {
                             </Button>
 
                             <Button asChild size="sm">
-                                <Link
+                                <a
                                     href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     Donate
-                                </Link>
+                                </a>
                             </Button>
                         </div>
 
@@ -122,8 +123,14 @@ export const HeroHeader = () => {
                             onClick={() => setMenuState(!menuState)}
                             aria-label={menuState ? 'Close Menu' : 'Open Menu'}
                             className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                            <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                            <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+                            <Menu className={cn(
+                                "m-auto size-6 duration-200 transition-all",
+                                menuState && "rotate-180 scale-0 opacity-0"
+                            )} />
+                            <X className={cn(
+                                "absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 transition-all",
+                                menuState && "rotate-0 scale-100 opacity-100"
+                            )} />
                         </button>
                     </div>
 
@@ -147,14 +154,14 @@ export const HeroHeader = () => {
                         </ul>
                         <div className="flex flex-col gap-3">
                             <Button asChild variant="outline" size="sm">
-                                <Link
+                                <a
                                     href="https://www.facebook.com/share/1AvsFjomFE/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMenuState(false)}>
                                     <FacebookIcon />
                                     <span className="ml-2">Follow on Facebook</span>
-                                </Link>
+                                </a>
                             </Button>
                             <Button asChild variant="outline" size="sm">
                                 <Link
@@ -164,13 +171,13 @@ export const HeroHeader = () => {
                                 </Link>
                             </Button>
                             <Button asChild size="sm">
-                                <Link
+                                <a
                                     href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setMenuState(false)}>
                                     Donate
-                                </Link>
+                                </a>
                             </Button>
                         </div>
                     </div>

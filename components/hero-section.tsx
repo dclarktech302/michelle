@@ -144,12 +144,12 @@ export default function HeroSection() {
                                         size="lg"
                                         variant="ghost"
                                         className="h-10.5 rounded-xl px-6">
-                                        <Link
+                                        <a
                                             href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                             target="_blank"
                                             rel="noopener noreferrer">
                                             <span className="text-nowrap">Donate Now</span>
-                                        </Link>
+                                        </a>
                                     </Button>
                                 </AnimatedGroup>
                             </div>
@@ -172,7 +172,7 @@ export default function HeroSection() {
                                 <div className="relative mx-auto max-w-2xl overflow-hidden rounded-2xl border shadow-lg shadow-zinc-950/15">
                                     <Image
                                         className="w-full object-cover object-top"
-                                        src="/images/candidate-hero.jpeg"
+                                        src="/images/candidate-headshot.webp"
                                         alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                                         width="800"
                                         height="600"

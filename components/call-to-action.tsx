@@ -27,12 +27,12 @@ export default function CallToAction() {
                                 size="lg"
                                 variant="outline"
                                 className="border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
-                                <Link
+                                <a
                                     href="https://secure.actblue.com/donate/michele-w--johnson-1"
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     Donate Now
-                                </Link>
+                                </a>
                             </Button>
                         </div>
 

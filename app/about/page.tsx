@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-sm lg:mx-0">
             <div className="overflow-hidden rounded-2xl border shadow-md">
               <Image
-                src="/images/candidate-hero.jpeg"
+                src="/images/candidate-headshot.webp"
                 alt="Michele W. Johnson, Candidate for Maryland House of Delegates District 37B"
                 width={600}
                 height={750}
@@ -35,12 +35,12 @@ export default function AboutPage() {
             </div>
             <div className="mt-4 space-y-3">
               <Button asChild size="lg" className="w-full">
-                <Link
+                <a
                   href="https://secure.actblue.com/donate/michele-w--johnson-1"
                   target="_blank"
                   rel="noopener noreferrer">
                   Donate to the Campaign
-                </Link>
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full">
                 <Link href="/get-involved">Get Involved</Link>
@@ -151,6 +151,34 @@ export default function AboutPage() {
               </p>
             </div>
 
+          </div>
+        </div>
+
+        {/* Endorsements */}
+        <div className="mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-8">
+          <h2 className="font-heading text-xl font-semibold mb-6">Endorsements</h2>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/images/MCEA-Apple-4cp-educatorRecommended-01.webp"
+              alt="MSEA Educator Recommended"
+              width={80}
+              height={80}
+              className="object-contain shrink-0"
+            />
+            <div>
+              <a
+                href="https://www.marylandeducators.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground hover:text-primary transition-colors duration-150">
+                Maryland State Education Association
+              </a>
+              <p className="text-sm text-muted-foreground mt-1">
+                Endorsed for the 2026 election cycle based on the recommendation
+                of the Dorchester Educators and the Talbot County Education
+                Association. MSEA represents educators across Maryland.
+              </p>
+            </div>
           </div>
         </div>
 

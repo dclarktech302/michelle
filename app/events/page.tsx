@@ -1,47 +1,90 @@
-import { events } from '@/data/events'
-import { CalendarDays, MapPin, Clock, ExternalLink } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import { events } from "@/data/events";
+import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
-  title: 'Events — Michele W. Johnson for Delegate',
+  title: "Events — Michele W. Johnson for Delegate",
   description:
-    'Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
-}
+    "Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.",
+};
 
 function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
+  return new Date(dateStr).toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 function isPast(dateStr: string) {
-  return new Date(dateStr) < new Date()
+  return new Date(dateStr) < new Date();
 }
 
 export default function EventsPage() {
-  const upcoming = events.filter(e => !isPast(e.date))
-  const past = events.filter(e => isPast(e.date))
+  const upcoming = events.filter((e) => !isPast(e.date));
+  const past = events.filter((e) => isPast(e.date));
 
   return (
     <main className="pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: "Meet and Greet for Michele Johnson",
+            startDate: "2026-06-06T12:00:00-04:00",
+            endDate: "2026-06-06T14:00:00-04:00",
+            eventStatus: "https://schema.org/EventScheduled",
+            eventAttendanceMode:
+              "https://schema.org/OfflineEventAttendanceMode",
+            location: {
+              "@type": "Place",
+              name: "Waters Edge Museum",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "101 Mill St.",
+                addressLocality: "Oxford",
+                addressRegion: "MD",
+                postalCode: "21654",
+                addressCountry: "US",
+              },
+            },
+            description:
+              "Join Michele at the Waters Edge Museum in Oxford for an in-person meet and greet. Come learn about her platform, ask questions, and show your support for District 37B.",
+            organizer: {
+              "@type": "Organization",
+              name: "Friends of Michele W. Johnson 37B",
+              url: "https://www.michelewjohnson.com",
+            },
+            image: "https://www.michelewjohnson.com/images/0606-event.png",
+          }),
+        }}
+      />
       <div className="mx-auto max-w-4xl px-6">
-
-        <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
-          Meet Michele. Every conversation matters.
-        </p>
+        <div className="text-center mb-16">
+          <h1 className="font-heading text-4xl font-semibold lg:text-5xl">
+            Events
+          </h1>
+          <p className="mt-4 text-muted-foreground max-w-xl mx-auto text-lg">
+            Meet Michele. Every conversation matters.
+          </p>
+        </div>
 
         {/* Upcoming */}
         {upcoming.length > 0 ? (
           <div className="space-y-6 mb-16">
-            <h2 className="text-xl font-semibold font-heading">Upcoming Events</h2>
-            {upcoming.map(event => (
+            <h2 className="text-xl font-semibold font-heading">
+              Upcoming Events
+            </h2>
+            {upcoming.map((event) => (
               <div
                 key={event.id}
-                className="rounded-2xl border p-6 space-y-4 hover:border-primary/50 transition-colors">
+                className="rounded-2xl border p-6 space-y-4 hover:border-primary/50 transition-colors"
+              >
                 <h3 className="text-lg font-semibold">{event.title}</h3>
                 <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
@@ -54,20 +97,36 @@ export default function EventsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="size-4 shrink-0" />
-                    <span>{event.location} — {event.address}</span>
+                    <span>
+                      {event.location} — {event.address}
+                    </span>
                   </div>
                 </div>
                 {event.description && (
-                  <p className="text-sm text-muted-foreground">{event.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {event.description}
+                  </p>
+                )}
+                {event.flyer && (
+                  <div className="mt-4 overflow-hidden rounded-xl border">
+                    <Image
+                      src={event.flyer}
+                      alt={`${event.title} flyer`}
+                      width={600}
+                      height={800}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 )}
                 {event.rsvpUrl && (
                   <Button asChild size="sm" variant="outline">
-                    <Link
+                    <a
                       href={event.rsvpUrl}
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       RSVP <ExternalLink className="ml-2 size-3" />
-                    </Link>
+                    </a>
                   </Button>
                 )}
               </div>
@@ -75,17 +134,21 @@ export default function EventsPage() {
           </div>
         ) : (
           <div className="rounded-2xl border bg-muted/30 p-10 text-center mb-16 space-y-3">
-            <h2 className="text-lg font-semibold font-heading">No upcoming events scheduled</h2>
+            <h2 className="text-lg font-semibold font-heading">
+              No upcoming events scheduled
+            </h2>
             <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-              Check back soon or follow on Facebook for the latest event announcements.
+              Check back soon or follow on Facebook for the latest event
+              announcements.
             </p>
             <Button asChild variant="outline" size="sm">
-              <Link
+              <a
                 href="https://www.facebook.com/share/1AvsFjomFE/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 Follow on Facebook
-              </Link>
+              </a>
             </Button>
           </div>
         )}
@@ -93,15 +156,29 @@ export default function EventsPage() {
         {/* Past events */}
         {past.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-muted-foreground font-heading">Past Events</h2>
-            {past.map(event => (
+            <h2 className="text-xl font-semibold text-muted-foreground font-heading">
+              Past Events
+            </h2>
+            {past.map((event) => (
               <div
                 key={event.id}
-                className="rounded-2xl border border-dashed p-6 opacity-60">
+                className="rounded-2xl border border-dashed p-6 opacity-60"
+              >
                 <h3 className="font-medium">{event.title}</h3>
                 <p className="text-sm text-muted-foreground mt-1">
                   {formatDate(event.date)} · {event.location}
                 </p>
+                {event.flyer && (
+                  <div className="mt-3 overflow-hidden rounded-xl border opacity-60">
+                    <Image
+                      src={event.flyer}
+                      alt={`${event.title} flyer`}
+                      width={400}
+                      height={533}
+                      className="w-full h-auto max-w-xs"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -109,17 +186,19 @@ export default function EventsPage() {
 
         {/* Stay connected */}
         <div className="mt-16 rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
-          <h2 className="text-xl font-semibold font-heading">Want to host an event?</h2>
+          <h2 className="text-xl font-semibold font-heading">
+            Want to host an event?
+          </h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
-            Hosting a house party is one of the most powerful ways to support the campaign.
-            Fill out the volunteer form and select "Host a house party."
+            Hosting a house party is one of the most powerful ways to support
+            the campaign. Fill out the volunteer form and select "Host a house
+            party."
           </p>
           <Button asChild size="sm">
             <Link href="/get-involved">Sign Up to Host</Link>
           </Button>
         </div>
-
       </div>
     </main>
-  )
+  );
 }
