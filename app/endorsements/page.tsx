@@ -144,13 +144,6 @@ export default function EndorsementsPage() {
               </Card>
             </RevealOnScroll>
           ))}
-
-          {/* Placeholder for future endorsements */}
-          <RevealOnScroll variant="up" delay={0}>
-            <div className="rounded-2xl border border-dashed border-border p-10 text-center text-muted-foreground text-sm">
-              More endorsements coming as the campaign progresses.
-            </div>
-          </RevealOnScroll>
         </div>
       </section>
 
