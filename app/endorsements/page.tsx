@@ -49,6 +49,19 @@ const endorsements = [
     href: "https://thirdact.org/maryland",
     linkLabel: "thirdact.org/maryland",
   },
+  {
+    id: "md-now-pac",
+    image: "/images/md-now-pac.png",
+    imageAlt: "Maryland NOW PAC",
+    imageClass: "object-contain",
+    name: "Maryland NOW PAC",
+    meta: null,
+    quote: null,
+    description:
+      "Maryland NOW PAC endorses Michele W. Johnson for Maryland House of Delegates, District 37B",
+    href: "https://marylandnow.org",
+    linkLabel: "marylandnow.org",
+  },
 ];
 
 export default function EndorsementsPage() {
