@@ -51,7 +51,7 @@ const endorsements = [
   },
   {
     id: "md-now-pac",
-    image: "/images/md-now-pac.png",
+    image: "/images/wg-thumb-maryland.webp",
     imageAlt: "Maryland NOW PAC",
     imageClass: "object-contain",
     name: "Maryland NOW PAC",
