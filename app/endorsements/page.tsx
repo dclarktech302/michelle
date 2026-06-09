@@ -11,9 +11,63 @@ export const metadata = {
     "Leaders and organizations across District 37B and Maryland standing with Michele W. Johnson.",
 };
 
+const endorsements = [
+  {
+    id: "msea",
+    image: "/images/MCEA-Apple-4cp-educatorRecommended-01.webp",
+    imageAlt: "MSEA Educator Recommended",
+    imageClass: "object-contain",
+    name: "Maryland State Education Association",
+    meta: "2026 Election Cycle · Educator Recommended",
+    quote:
+      "Based on the recommendation of the Dorchester Educators and the Talbot County Education Association — the Maryland State Education Association endorses Michele W. Johnson for the House of Delegates in the 2026 elections.",
+    href: "https://marylandeducators.org",
+    linkLabel: "marylandeducators.org",
+  },
+  {
+    id: "brooke-lierman",
+    image: "/images/Brooke Lierman Headshot official.webp",
+    imageAlt: "Maryland Comptroller Brooke Lierman",
+    imageClass: "object-cover rounded-full",
+    name: "Maryland Comptroller Brooke Lierman",
+    meta: null,
+    quote:
+      "Michele Johnson is exactly the kind of leader the Eastern Shore needs. She knows her neighbors, she shows up for them, and she is ready to fight for an economy that works for every family in Caroline, Dorchester, Talbot, and Wicomico. I am proud to support her!",
+    href: "https://www.brookelierman.com",
+    linkLabel: "brookelierman.com",
+  },
+  {
+    id: "third-act-maryland",
+    image: "/images/wg-thumb-maryland.webp",
+    imageAlt: "Third Act Maryland",
+    imageClass: "object-contain",
+    name: "Third Act Maryland",
+    meta: null,
+    quote: null,
+    description:
+      "Third Act Maryland endorses Michele W. Johnson for Maryland House of Delegates, District 37B",
+    href: "https://thirdact.org/maryland",
+    linkLabel: "thirdact.org/maryland",
+  },
+  {
+    id: "md-now-pac",
+    image: "/images/2025-MDNOWPAC_SqWebLogo.webp",
+    imageAlt: "Maryland NOW PAC",
+    imageClass: "object-contain",
+    name: "Maryland NOW PAC",
+    meta: null,
+    quote: null,
+    description:
+      "Maryland NOW PAC endorses Michele W. Johnson for Maryland House of Delegates, District 37B",
+    href: "https://marylandnow.org",
+    linkLabel: "marylandnow.org",
+  },
+];
+
 export default function EndorsementsPage() {
   return (
     <div className="min-h-screen">
+
       {/* Page header */}
       <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-muted/20 border-b border-border">
         <div className="mx-auto max-w-5xl px-6 text-center">
@@ -30,60 +84,66 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      {/* Endorsement cards */}
+      {/* Endorsement cards — Option C: stacked full-width */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-5xl px-6 space-y-10">
+        <div className="mx-auto max-w-5xl px-6 space-y-8">
+          {endorsements.map((e, i) => (
+            <RevealOnScroll
+              key={e.id}
+              variant={i % 2 === 0 ? "left" : "right"}
+              delay={0}>
+              <Card className="rounded-2xl border shadow-sm overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid sm:grid-cols-[220px_1fr]">
 
-          {/* MSEA */}
-          <RevealOnScroll variant="right" delay={100}>
-            <Card className="rounded-2xl border shadow-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid sm:grid-cols-[260px_1fr]">
-                  <div className="min-h-[260px] bg-muted/30 flex items-center justify-center overflow-hidden group/img">
-                    <Image
-                      src="/images/MCEA-Apple-4cp-educatorRecommended-01.webp"
-                      alt="MSEA Educator Recommended"
-                      width={140}
-                      height={140}
-                      className="object-contain transition-transform duration-300 group-hover/img:scale-110"
-                    />
+                    {/* Image column */}
+                    <div className="bg-muted/30 flex items-center justify-center min-h-[200px] p-6">
+                      <Image
+                        src={e.image}
+                        alt={e.imageAlt}
+                        width={160}
+                        height={160}
+                        className={e.imageClass}
+                      />
+                    </div>
+
+                    {/* Content column */}
+                    <div className="p-8 flex flex-col justify-center">
+                      <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
+                        Endorsed By
+                      </p>
+                      <h2 className="font-heading text-2xl font-semibold mb-1">
+                        {e.name}
+                      </h2>
+                      {e.meta && (
+                        <p className="text-muted-foreground text-sm mb-1">
+                          {e.meta}
+                        </p>
+                      )}
+                      <Link
+                        href={e.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline mb-5">
+                        {e.linkLabel} <ExternalLink className="size-3" />
+                      </Link>
+                      {e.quote && (
+                        <blockquote className="border-l-2 border-primary/30 pl-4 text-muted-foreground italic leading-relaxed text-sm">
+                          &ldquo;{e.quote}&rdquo;
+                        </blockquote>
+                      )}
+                      {!e.quote && e.description && (
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {e.description}
+                        </p>
+                      )}
+                    </div>
+
                   </div>
-                  <div className="p-8 md:p-10 flex flex-col justify-center">
-                    <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
-                      Endorsed By
-                    </p>
-                    <h2 className="font-heading text-2xl font-semibold mb-1">
-                      Maryland State Education Association
-                    </h2>
-                    <p className="text-muted-foreground text-sm mb-1">
-                      2026 Election Cycle · Educator Recommended
-                    </p>
-                    <a
-                      href="https://marylandeducators.org/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-primary hover:underline mb-5">
-                      marylandeducators.org <ExternalLink className="size-3" />
-                    </a>
-                    <blockquote className="border-l-2 border-primary/30 pl-4 text-muted-foreground italic leading-relaxed text-sm">
-                      "Based on the recommendation of the Dorchester Educators
-                      and the Talbot County Education Association, the Maryland
-                      State Education Association endorses Michele W. Johnson
-                      for the House of Delegates in the 2026 elections."
-                    </blockquote>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </RevealOnScroll>
-
-          {/* Placeholder */}
-          <RevealOnScroll variant="up" delay={150}>
-            <div className="rounded-2xl border border-dashed border-border p-10 text-center text-muted-foreground text-sm">
-              More endorsements coming as the campaign progresses.
-            </div>
-          </RevealOnScroll>
-
+                </CardContent>
+              </Card>
+            </RevealOnScroll>
+          ))}
         </div>
       </section>
 
