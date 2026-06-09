@@ -38,7 +38,7 @@ const endorsements = [
   },
   {
     id: "third-act-maryland",
-    image: "/images/2025-MDNOWPAC_SqWebLogo.webp",
+    image: "/images/wg-thumb-maryland.webp",
     imageAlt: "Third Act Maryland",
     imageClass: "object-contain",
     name: "Third Act Maryland",
@@ -51,7 +51,7 @@ const endorsements = [
   },
   {
     id: "md-now-pac",
-    image: "/images/wg-thumb-maryland.webp",
+    image: "/images/2025-MDNOWPAC_SqWebLogo.webp",
     imageAlt: "Maryland NOW PAC",
     imageClass: "object-contain",
     name: "Maryland NOW PAC",
