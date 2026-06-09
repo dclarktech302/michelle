@@ -67,7 +67,7 @@ export default function EndorsementsCta() {
               <CardContent className="flex flex-col sm:flex-row items-center gap-6 p-8 h-full">
                 <div className="shrink-0 flex items-center justify-center">
                   <Image
-                    src="/images/brooke-lierman.jpg"
+                    src="/images/Brooke Lierman Headshot official.webp"
                     alt="Maryland Comptroller Brooke Lierman"
                     width={100}
                     height={100}
