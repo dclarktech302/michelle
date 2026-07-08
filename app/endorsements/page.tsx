@@ -13,36 +13,51 @@ export const metadata = {
 
 const endorsements = [
   {
+    id: "moore",
+    image: "/images/wes_moore_headshot.jpg",
+    imageAlt: "Governor Wes Moore",
+    imageClass: "object-cover rounded-full",
+    name: "Governor Wes Moore",
+    attribution: "Governor Wes Moore",
+    quote:
+      "We have delivered enormous progress for the people of Maryland since taking office, but there is still more work to do, and Michele Johnson is a leader who will help us finish the job in District 37B. In order to continue record drops in violent crime, keep lowering costs for Maryland families, and make our schools even stronger I need a team that will push back and push forward to build a Maryland that leaves no one behind. Together with Michele, we will work day and night alongside one another to continue the progress we've seen in District 37B and throughout Maryland.",
+    description: null,
+    href: "https://wesmoore.com",
+    linkLabel: "wesmoore.com",
+  },
+  {
     id: "msea",
     image: "/images/MCEA-Apple-4cp-educatorRecommended-01.webp",
     imageAlt: "MSEA Educator Recommended",
     imageClass: "object-contain",
     name: "Maryland State Education Association",
-    meta: "2026 Election Cycle · Educator Recommended",
+    attribution: "2026 Election Cycle · Educator Recommended",
     quote:
       "Based on the recommendation of the Dorchester Educators and the Talbot County Education Association — the Maryland State Education Association endorses Michele W. Johnson for the House of Delegates in the 2026 elections.",
+    description: null,
     href: "https://marylandeducators.org",
     linkLabel: "marylandeducators.org",
   },
   {
-    id: "brooke-lierman",
-    image: "/images/Brooke Lierman Headshot official.webp",
+    id: "lierman",
+    image: "/images/brooke-lierman.jpg",
     imageAlt: "Maryland Comptroller Brooke Lierman",
     imageClass: "object-cover rounded-full",
     name: "Maryland Comptroller Brooke Lierman",
-    meta: null,
+    attribution: "Maryland Comptroller Brooke Lierman",
     quote:
       "Michele Johnson is exactly the kind of leader the Eastern Shore needs. She knows her neighbors, she shows up for them, and she is ready to fight for an economy that works for every family in Caroline, Dorchester, Talbot, and Wicomico. I am proud to support her!",
+    description: null,
     href: "https://www.brookelierman.com",
     linkLabel: "brookelierman.com",
   },
   {
-    id: "third-act-maryland",
-    image: "/images/wg-thumb-maryland.webp",
+    id: "thirdact",
+    image: "/images/third-act-maryland.jpg",
     imageAlt: "Third Act Maryland",
     imageClass: "object-contain",
     name: "Third Act Maryland",
-    meta: null,
+    attribution: null,
     quote: null,
     description:
       "Third Act Maryland endorses Michele W. Johnson for Maryland House of Delegates, District 37B",
@@ -50,12 +65,12 @@ const endorsements = [
     linkLabel: "thirdact.org/maryland",
   },
   {
-    id: "md-now-pac",
-    image: "/images/2025-MDNOWPAC_SqWebLogo.webp",
+    id: "mdnow",
+    image: "/images/md-now-pac.png",
     imageAlt: "Maryland NOW PAC",
     imageClass: "object-contain",
     name: "Maryland NOW PAC",
-    meta: null,
+    attribution: null,
     quote: null,
     description:
       "Maryland NOW PAC endorses Michele W. Johnson for Maryland House of Delegates, District 37B",
@@ -84,7 +99,7 @@ export default function EndorsementsPage() {
         </div>
       </section>
 
-      {/* Endorsement cards — Option C: stacked full-width */}
+      {/* Endorsement cards */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-6 space-y-8">
           {endorsements.map((e, i) => (
@@ -115,9 +130,9 @@ export default function EndorsementsPage() {
                       <h2 className="font-heading text-2xl font-semibold mb-1">
                         {e.name}
                       </h2>
-                      {e.meta && (
+                      {e.attribution && (
                         <p className="text-muted-foreground text-sm mb-1">
-                          {e.meta}
+                          {e.attribution}
                         </p>
                       )}
                       <Link
