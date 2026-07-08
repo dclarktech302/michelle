@@ -52,7 +52,7 @@ const otherEndorsements: EndorsementEntry[] = [
   {
     id: 'lierman',
     name: 'Maryland Comptroller Brooke Lierman',
-    image: '/images/brooke-lierman.jpg',
+    image: '/images/Brooke Lierman Headshot official.webp',
     imageAlt: 'Maryland Comptroller Brooke Lierman',
     imageClass: 'object-cover rounded-full',
     quote:
@@ -65,7 +65,7 @@ const otherEndorsements: EndorsementEntry[] = [
   {
     id: 'thirdact',
     name: 'Third Act Maryland',
-    image: '/images/third-act-maryland.jpg',
+    image: '/images/wg-thumb-maryland.webp',
     imageAlt: 'Third Act Maryland',
     imageClass: 'object-contain',
     quote: null,
@@ -78,7 +78,7 @@ const otherEndorsements: EndorsementEntry[] = [
   {
     id: 'mdnow',
     name: 'Maryland NOW PAC',
-    image: '/images/md-now-pac.png',
+    image: '/images/2025-MDNOWPAC_SqWebLogo.webp',
     imageAlt: 'Maryland NOW PAC',
     imageClass: 'object-contain',
     quote: null,
