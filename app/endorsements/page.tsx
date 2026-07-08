@@ -119,6 +119,7 @@ export default function EndorsementsPage() {
                         width={160}
                         height={160}
                         className={e.imageClass}
+                        unoptimized
                       />
                     </div>
 

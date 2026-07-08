@@ -111,6 +111,7 @@ function EndorsementCard({
                 width={160}
                 height={160}
                 className={e.imageClass}
+                unoptimized
               />
             </div>
             <div className="p-8 flex flex-col justify-center">
