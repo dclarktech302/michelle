@@ -16,8 +16,8 @@ const endorsements = [
     id: "moore",
     image: "/images/wes_moore_headshot.jpg",
     imageAlt: "Governor Wes Moore",
-    imageClass: "object-cover object-top scale-125",
-    imageContainerClass: "overflow-hidden rounded-full w-[160px] h-[160px]",
+    imageClass: "object-cover object-[center_15%]",
+    imageContainerClass: "relative overflow-hidden rounded-full w-[160px] h-[160px]",
     name: "Governor Wes Moore",
     attribution: "Governor Wes Moore",
     quote:
@@ -119,8 +119,7 @@ export default function EndorsementsPage() {
                           <Image
                             src={e.image}
                             alt={e.imageAlt}
-                            width={160}
-                            height={160}
+                            fill
                             className={e.imageClass}
                             unoptimized
                           />
