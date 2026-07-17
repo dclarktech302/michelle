@@ -14,6 +14,7 @@ type EndorsementEntry = {
   image: string
   imageAlt: string
   imageClass: string
+  imageContainerClass?: string
   quote: string | null
   description?: string | null
   attribution: string | null
@@ -26,7 +27,8 @@ const moore: EndorsementEntry = {
   name: 'Governor Wes Moore',
   image: '/images/wes_moore_headshot.jpg',
   imageAlt: 'Governor Wes Moore',
-  imageClass: 'object-cover rounded-full',
+  imageClass: 'object-cover object-top scale-125',
+  imageContainerClass: 'overflow-hidden rounded-full w-[160px] h-[160px]',
   quote:
     "We have delivered enormous progress for the people of Maryland since taking office, but there is still more work to do, and Michele Johnson is a leader who will help us finish the job in District 37B. In order to continue record drops in violent crime, keep lowering costs for Maryland families, and make our schools even stronger I need a team that will push back and push forward to build a Maryland that leaves no one behind. Together with Michele, we will work day and night alongside one another to continue the progress we've seen in District 37B and throughout Maryland.",
   description: null,
@@ -105,14 +107,27 @@ function EndorsementCard({
         <CardContent className="p-0">
           <div className="grid sm:grid-cols-[220px_1fr]">
             <div className="bg-muted/30 flex items-center justify-center min-h-[200px] p-6">
-              <Image
-                src={e.image}
-                alt={e.imageAlt}
-                width={160}
-                height={160}
-                className={e.imageClass}
-                unoptimized
-              />
+              {e.imageContainerClass ? (
+                <div className={e.imageContainerClass}>
+                  <Image
+                    src={e.image}
+                    alt={e.imageAlt}
+                    width={160}
+                    height={160}
+                    className={e.imageClass}
+                    unoptimized
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={e.image}
+                  alt={e.imageAlt}
+                  width={160}
+                  height={160}
+                  className={e.imageClass}
+                  unoptimized
+                />
+              )}
             </div>
             <div className="p-8 flex flex-col justify-center">
               <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">

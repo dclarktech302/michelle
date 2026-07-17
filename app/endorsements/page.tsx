@@ -16,7 +16,8 @@ const endorsements = [
     id: "moore",
     image: "/images/wes_moore_headshot.jpg",
     imageAlt: "Governor Wes Moore",
-    imageClass: "object-cover rounded-full",
+    imageClass: "object-cover object-top scale-125",
+    imageContainerClass: "overflow-hidden rounded-full w-[160px] h-[160px]",
     name: "Governor Wes Moore",
     attribution: "Governor Wes Moore",
     quote:
@@ -113,14 +114,27 @@ export default function EndorsementsPage() {
 
                     {/* Image column */}
                     <div className="bg-muted/30 flex items-center justify-center min-h-[200px] p-6">
-                      <Image
-                        src={e.image}
-                        alt={e.imageAlt}
-                        width={160}
-                        height={160}
-                        className={e.imageClass}
-                        unoptimized
-                      />
+                      {e.imageContainerClass ? (
+                        <div className={e.imageContainerClass}>
+                          <Image
+                            src={e.image}
+                            alt={e.imageAlt}
+                            width={160}
+                            height={160}
+                            className={e.imageClass}
+                            unoptimized
+                          />
+                        </div>
+                      ) : (
+                        <Image
+                          src={e.image}
+                          alt={e.imageAlt}
+                          width={160}
+                          height={160}
+                          className={e.imageClass}
+                          unoptimized
+                        />
+                      )}
                     </div>
 
                     {/* Content column */}
