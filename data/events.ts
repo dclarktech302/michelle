@@ -2,6 +2,31 @@ import { Event } from '@/lib/types'
 
 export const events: Event[] = [
   {
+    id: 'women-who-lead-1004',
+    title: 'Women Who Lead: A Reception Supporting Katie, Susan and Michele',
+    date: '2026-10-04',
+    time: '3:00 PM – 5:00 PM',
+    location: 'On the Waterfront, Easton, MD',
+    address: 'Easton, MD',
+    addressNote: 'Address provided after RSVP',
+    description: 'Join us for afternoon tea and conversation with three outstanding candidates. Hosted by the Lesher and Bruce families.',
+    rsvpUrl: 'https://www.mobilize.us/mobilize/event/1042602/?force_banner=true&share_context=event_details&share_medium=copy_link',
+    flyer: '/images/1004-event.jpg',
+    county: 'Talbot',
+  },
+  {
+    id: 'community-conversation-cambridge-1005',
+    title: 'Community Conversation with Michele W. Johnson',
+    date: '2026-10-05',
+    time: '4:30 PM – 6:00 PM',
+    location: '104 Tech Park Drive, Cambridge, MD 21613',
+    address: '104 Tech Park Drive, Cambridge, MD 21613',
+    description: 'Join Michele for a community conversation in Cambridge.',
+    rsvpUrl: 'https://www.eventbrite.com/e/community-conversation-with-michele-w-johnson-tickets-2002454533414?aff=ebdsshother&utm_share_source=listing_android',
+    flyer: '/images/1005-event.jpg',
+    county: 'Dorchester',
+  },
+  {
     id: 'meet-candidates-0810',
     title: 'Meet the Candidates',
     date: '2026-08-10',

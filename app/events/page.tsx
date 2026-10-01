@@ -3,6 +3,7 @@ import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import RevealOnScroll from "@/components/features/RevealOnScroll";
 
 export const metadata = {
   title: "Events — Michele W. Johnson for Delegate",
@@ -81,8 +82,8 @@ export default function EventsPage() {
               Upcoming Events
             </h2>
             {upcoming.map((event) => (
+              <RevealOnScroll key={event.id} variant="up">
               <div
-                key={event.id}
                 className="rounded-2xl border p-6 space-y-4 hover:border-primary/50 transition-colors"
               >
                 <h3 className="text-lg font-semibold">{event.title}</h3>
@@ -98,7 +99,20 @@ export default function EventsPage() {
                   <div className="flex items-center gap-2">
                     <MapPin className="size-4 shrink-0" />
                     <span>
-                      {event.location} — {event.address}
+                      {event.addressNote ? (
+                        <>
+                          {event.location}
+                          <span className="block italic">
+                            {event.addressNote}
+                          </span>
+                        </>
+                      ) : event.address === event.location ? (
+                        event.location
+                      ) : (
+                        <>
+                          {event.location} — {event.address}
+                        </>
+                      )}
                     </span>
                   </div>
                 </div>
@@ -130,6 +144,7 @@ export default function EventsPage() {
                   </Button>
                 )}
               </div>
+              </RevealOnScroll>
             ))}
           </div>
         ) : (
