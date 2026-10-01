@@ -23,6 +23,7 @@ export interface Event {
   time: string
   location: string
   address: string
+  addressNote?: string
   description?: string
   rsvpUrl?: string
   flyer?: string
