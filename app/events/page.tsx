@@ -3,6 +3,8 @@ import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import JsonLd from "@/components/json-ld";
+import type { Event } from "@/lib/types";
 import RevealOnScroll from "@/components/features/RevealOnScroll";
 
 export const metadata = {
@@ -25,47 +27,90 @@ function isPast(dateStr: string) {
   return new Date(dateStr) < new Date();
 }
 
+const SITE_URL = "https://www.michelewjohnson.com";
+
+// UTC offset of America/New_York on the given calendar day ("-04:00" or "-05:00").
+function easternOffset(dateStr: string) {
+  const noonUtc = new Date(`${dateStr}T12:00:00Z`);
+  const part = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    timeZoneName: "longOffset",
+  })
+    .formatToParts(noonUtc)
+    .find((p) => p.type === "timeZoneName")?.value;
+  const match = part?.match(/GMT([+-]\d{2}:\d{2})/);
+  return match ? match[1] : "-05:00";
+}
+
+// "3:00 PM" -> "15:00:00"
+function to24h(time: string) {
+  const m = time.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+  if (!m) return null;
+  let hour = Number(m[1]) % 12;
+  if (m[3].toUpperCase() === "PM") hour += 12;
+  return `${String(hour).padStart(2, "0")}:${m[2]}:00`;
+}
+
+function buildEventJsonLd(event: Event) {
+  const offset = easternOffset(event.date);
+  const [startTime, endTime] = event.time.split(/\s*[–-]\s*/).map(to24h);
+  const stamp = (t: string | null | undefined) =>
+    t ? `${event.date}T${t}${offset}` : undefined;
+
+  // Street addresses can be withheld (addressNote); only publish city/state then.
+  const full = event.address.match(/^(.*), ([^,]+), ([A-Z]{2}) (\d{5})$/);
+  const cityState = event.address.match(/^([^,]+), ([A-Z]{2})$/);
+  const address = event.addressNote
+    ? cityState && {
+        "@type": "PostalAddress",
+        addressLocality: cityState[1],
+        addressRegion: cityState[2],
+        addressCountry: "US",
+      }
+    : full
+      ? {
+          "@type": "PostalAddress",
+          streetAddress: full[1],
+          addressLocality: full[2],
+          addressRegion: full[3],
+          postalCode: full[4],
+          addressCountry: "US",
+        }
+      : event.address;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    startDate: stamp(startTime) ?? event.date,
+    ...(stamp(endTime) && { endDate: stamp(endTime) }),
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: event.location,
+      ...(address && { address }),
+    },
+    ...(event.description && { description: event.description }),
+    organizer: {
+      "@type": "Organization",
+      name: "Friends of Michele W. Johnson 37B",
+      url: SITE_URL,
+    },
+    ...(event.flyer && { image: `${SITE_URL}${event.flyer}` }),
+    url: `${SITE_URL}/events`,
+  };
+}
+
 export default function EventsPage() {
   const upcoming = events.filter((e) => !isPast(e.date));
   const past = events.filter((e) => isPast(e.date));
 
   return (
     <main className="pt-32 pb-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Event",
-            name: "Meet and Greet for Michele Johnson",
-            startDate: "2026-06-06T12:00:00-04:00",
-            endDate: "2026-06-06T14:00:00-04:00",
-            eventStatus: "https://schema.org/EventScheduled",
-            eventAttendanceMode:
-              "https://schema.org/OfflineEventAttendanceMode",
-            location: {
-              "@type": "Place",
-              name: "Waters Edge Museum",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "101 Mill St.",
-                addressLocality: "Oxford",
-                addressRegion: "MD",
-                postalCode: "21654",
-                addressCountry: "US",
-              },
-            },
-            description:
-              "Join Michele at the Waters Edge Museum in Oxford for an in-person meet and greet. Come learn about her platform, ask questions, and show your support for District 37B.",
-            organizer: {
-              "@type": "Organization",
-              name: "Friends of Michele W. Johnson 37B",
-              url: "https://www.michelewjohnson.com",
-            },
-            image: "https://www.michelewjohnson.com/images/0606-event.png",
-          }),
-        }}
-      />
+      {upcoming.map((event) => (
+        <JsonLd key={event.id} data={buildEventJsonLd(event)} />
+      ))}
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center mb-16">
           <h1 className="font-heading text-4xl font-semibold lg:text-5xl">

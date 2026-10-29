@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import JsonLd from '@/components/json-ld'
 
 export const metadata = {
   title: 'About Michele — Michele W. Johnson for Delegate',
@@ -9,9 +10,19 @@ export const metadata = {
   alternates: { canonical: '/about' },
 }
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Michele W. Johnson',
+  url: 'https://www.michelewjohnson.com',
+  jobTitle: 'Candidate, Maryland House of Delegates, District 37B',
+  image: 'https://www.michelewjohnson.com/images/og-image.jpg',
+}
+
 export default function AboutPage() {
   return (
     <main className="pt-32 pb-20">
+      <JsonLd data={personJsonLd} />
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
