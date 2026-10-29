@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
-
-const POLLING_URL = 'https://voterservices.elections.maryland.gov/PollingPlaceSearch'
+import { ELECTION_PHASE, POLLING_URL, OFFICIAL_RESULTS_URL } from '@/lib/election-phase'
 
 const steps = [
     {
@@ -20,13 +19,38 @@ const steps = [
 
 export default function VoteInfo({ headingLevel = 'h2' }: { headingLevel?: 'h1' | 'h2' }) {
     const Heading = headingLevel
+
+    if (ELECTION_PHASE === 'after') {
+        return (
+            <div className="mx-auto max-w-3xl px-6 text-center">
+                <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
+                    Election Day, November 3, 2026
+                </p>
+                <Heading className="font-heading text-3xl lg:text-4xl font-semibold">
+                    Thank you, District 37B
+                </Heading>
+                <p className="mt-4 text-muted-foreground text-lg">
+                    Thank you to every voter, volunteer, and supporter across Talbot,
+                    Caroline, Dorchester, and Wicomico Counties. Polls have closed.
+                    Official results are posted by the Maryland State Board of Elections.
+                </p>
+                <Button asChild size="lg" className="mt-8 rounded-xl">
+                    <a href={OFFICIAL_RESULTS_URL} target="_blank" rel="noopener noreferrer">
+                        Official election results <ExternalLink className="ml-2 size-4" />
+                    </a>
+                </Button>
+            </div>
+        )
+    }
+
+    const today = ELECTION_PHASE === 'election-day'
     return (
         <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="text-xs font-bold tracking-[0.18em] text-primary uppercase mb-3">
-                Election Day is Tuesday, November 3
+                {today ? 'Election Day is today' : 'Election Day is Tuesday, November 3'}
             </p>
             <Heading className="font-heading text-3xl lg:text-4xl font-semibold">
-                How to vote
+                {today ? 'Polls are open until 8 PM' : 'How to vote'}
             </Heading>
             <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
                 Michele W. Johnson is on the ballot for Maryland House of Delegates,

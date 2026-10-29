@@ -6,11 +6,14 @@ import EndorsementsCta from "@/components/endorsements-cta";
 import Testimonials from "@/components/testimonials";
 import CallToAction from "@/components/call-to-action";
 import VoteInfo from "@/components/vote-info";
+import { ELECTION_PHASE } from "@/lib/election-phase";
 
 export const metadata: Metadata = {
   title: "Michele W. Johnson for Maryland House of Delegates, District 37B",
   description:
-    "Vote Michele W. Johnson on November 3 for Maryland House of Delegates, District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
+    ELECTION_PHASE === "after"
+      ? "Michele W. Johnson, candidate for Maryland House of Delegates, District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties. Thank you, District 37B."
+      : "Vote Michele W. Johnson on November 3 for Maryland House of Delegates, District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
   alternates: { canonical: "/" },
 };
 

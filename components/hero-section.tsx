@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { TextEffect } from '@/components/ui/text-effect'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
+import { ELECTION_PHASE, POLLING_URL } from '@/lib/election-phase'
 
 const transitionVariants = {
     item: {
@@ -129,37 +130,36 @@ export default function HeroSection() {
                                         ...transitionVariants,
                                     }}
                                     className="mt-10 flex flex-col items-center justify-center gap-3 md:flex-row">
-                                    <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
-                                        <Button
-                                            asChild
-                                            size="lg"
-                                            className="rounded-xl px-6 text-base">
-                                            <Link href="/vote">
-                                                <span className="text-nowrap">Vote Tuesday, Nov 3</span>
-                                            </Link>
-                                        </Button>
-                                    </div>
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        variant="outline"
-                                        className="h-10.5 rounded-xl px-6">
-                                        <Link href="/get-involved">
-                                            <span className="text-nowrap">Get Involved</span>
-                                        </Link>
-                                    </Button>
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        variant="ghost"
-                                        className="h-10.5 rounded-xl px-6">
-                                        <a
-                                            href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                                            target="_blank"
-                                            rel="noopener noreferrer">
-                                            <span className="text-nowrap">Donate Now</span>
-                                        </a>
-                                    </Button>
+                                    {ELECTION_PHASE === 'after' ? (
+                                        <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                                            <Button asChild size="lg" className="rounded-xl px-6 text-base">
+                                                <Link href="/vote">
+                                                    <span className="text-nowrap">Thank you, District 37B</span>
+                                                </Link>
+                                            </Button>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                                                <Button asChild size="lg" className="rounded-xl px-6 text-base">
+                                                    {ELECTION_PHASE === 'election-day' ? (
+                                                        <a href={POLLING_URL} target="_blank" rel="noopener noreferrer">
+                                                            <span className="text-nowrap">Polls open today until 8 PM</span>
+                                                        </a>
+                                                    ) : (
+                                                        <Link href="/vote">
+                                                            <span className="text-nowrap">Vote Tuesday, Nov 3</span>
+                                                        </Link>
+                                                    )}
+                                                </Button>
+                                            </div>
+                                            <Button asChild size="lg" variant="outline" className="h-10.5 rounded-xl px-6">
+                                                <Link href="/get-involved">
+                                                    <span className="text-nowrap">Get Involved</span>
+                                                </Link>
+                                            </Button>
+                                        </>
+                                    )}
                                 </AnimatedGroup>
                             </div>
                         </div>
