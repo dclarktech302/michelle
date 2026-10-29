@@ -6,13 +6,14 @@ import Image from "next/image";
 import JsonLd from "@/components/json-ld";
 import type { Event } from "@/lib/types";
 import RevealOnScroll from "@/components/features/RevealOnScroll";
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata = {
-  title: "Events — Michele W. Johnson for Delegate",
+export const metadata = pageMetadata({
+  title: 'Events — Michele W. Johnson for Delegate',
   description:
-    "Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.",
-  alternates: { canonical: "/events" },
-};
+    'Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
+  path: '/events',
+})
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {

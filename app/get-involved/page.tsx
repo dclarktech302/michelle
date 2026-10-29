@@ -1,13 +1,14 @@
 import VolunteerForm from '@/components/features/volunteerForm'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Get Involved — Michele W. Johnson for Delegate',
   description:
     'Volunteer, host a house party, request a yard sign, or donate to the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
-  alternates: { canonical: '/get-involved' },
-}
+  path: '/get-involved',
+})
 
 export default function GetInvolvedPage() {
   return (

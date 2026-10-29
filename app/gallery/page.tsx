@@ -1,12 +1,13 @@
 import GalleryGrid from '@/components/features/galleryGrid'
 import { galleryImages } from '@/data/gallery'
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Gallery — Michele W. Johnson for Delegate',
   description:
     'Photos from the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
-  alternates: { canonical: '/gallery' },
-}
+  path: '/gallery',
+})
 
 export default function GalleryPage() {
   return (
