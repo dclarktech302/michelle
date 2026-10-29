@@ -199,9 +199,12 @@ export default function EventsPage() {
               No upcoming events scheduled
             </h2>
             <p className="text-sm text-muted-foreground max-w-sm mx-auto">
-              Check back soon or follow on Facebook for the latest event
-              announcements.
+              Election Day is Tuesday, November 3. Polls are open 7 AM to 8 PM.
+              Follow on Facebook for the latest announcements.
             </p>
+            <Button asChild size="sm">
+              <Link href="/vote">How to vote</Link>
+            </Button>
             <Button asChild variant="outline" size="sm">
               <a
                 href="https://www.facebook.com/share/1AvsFjomFE/"
