@@ -21,7 +21,7 @@ const personJsonLd = {
 
 export default function AboutPage() {
   return (
-    <main className="pt-32 pb-20">
+    <div className="pt-32 pb-20">
       <JsonLd data={personJsonLd} />
       <div className="mx-auto max-w-5xl px-6">
 
@@ -214,6 +214,6 @@ export default function AboutPage() {
         </div>
 
       </div>
-    </main>
+    </div>
   )
 }

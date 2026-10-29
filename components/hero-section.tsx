@@ -30,7 +30,7 @@ export default function HeroSection() {
     return (
         <>
             <HeroHeader />
-            <main className="overflow-hidden">
+            <div className="overflow-hidden">
 
                 {/* Decorative background gradients */}
                 <div
@@ -184,7 +184,7 @@ export default function HeroSection() {
 
                     </div>
                 </section>
-            </main>
+            </div>
         </>
     )
 }

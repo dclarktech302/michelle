@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function IssuesPage() {
   return (
-    <main className="pt-32 pb-20">
+    <div className="pt-32 pb-20">
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
@@ -69,6 +69,6 @@ export default function IssuesPage() {
         </div>
 
       </div>
-    </main>
+    </div>
   )
 }

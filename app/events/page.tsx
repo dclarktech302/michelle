@@ -107,7 +107,7 @@ export default function EventsPage() {
   const past = events.filter((e) => isPast(e.date));
 
   return (
-    <main className="pt-32 pb-20">
+    <div className="pt-32 pb-20">
       {upcoming.map((event) => (
         <JsonLd key={event.id} data={buildEventJsonLd(event)} />
       ))}
@@ -260,6 +260,6 @@ export default function EventsPage() {
           </Button>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
