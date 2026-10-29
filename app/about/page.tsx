@@ -6,6 +6,7 @@ export const metadata = {
   title: 'About Michele — Michele W. Johnson for Delegate',
   description:
     'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {

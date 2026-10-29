@@ -9,6 +9,7 @@ export const metadata = {
   title: "Endorsements | Michele W. Johnson for MD House of Delegates",
   description:
     "Leaders and organizations across District 37B and Maryland standing with Michele W. Johnson.",
+  alternates: { canonical: "/endorsements" },
 };
 
 const endorsements = [

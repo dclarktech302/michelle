@@ -14,10 +14,13 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.michelewjohnson.com'),
   title: "Michele W. Johnson for MD House of Delegates",
   description:
     "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
     description: "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",

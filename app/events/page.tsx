@@ -9,6 +9,7 @@ export const metadata = {
   title: "Events — Michele W. Johnson for Delegate",
   description:
     "Upcoming campaign events for Michele W. Johnson, candidate for Maryland House of Delegates District 37B.",
+  alternates: { canonical: "/events" },
 };
 
 function formatDate(dateStr: string) {

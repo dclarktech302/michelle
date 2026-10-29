@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Get Involved — Michele W. Johnson for Delegate',
   description:
     'Volunteer, host a house party, request a yard sign, or donate to the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
+  alternates: { canonical: '/get-involved' },
 }
 
 export default function GetInvolvedPage() {
