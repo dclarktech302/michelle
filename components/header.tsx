@@ -12,6 +12,7 @@ const menuItems = [
     { name: 'Events', href: '/events' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Get Involved', href: '/get-involved' },
+    { name: 'How to Vote', href: '/vote' },
 ]
 
 const FacebookIcon = () => (

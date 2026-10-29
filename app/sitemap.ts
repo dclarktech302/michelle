@@ -10,6 +10,7 @@ const routes = [
   '/endorsements',
   '/gallery',
   '/get-involved',
+  '/vote',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

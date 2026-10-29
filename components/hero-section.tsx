@@ -134,11 +134,20 @@ export default function HeroSection() {
                                             asChild
                                             size="lg"
                                             className="rounded-xl px-6 text-base">
-                                            <Link href="/get-involved">
-                                                <span className="text-nowrap">Get Involved</span>
+                                            <Link href="/vote">
+                                                <span className="text-nowrap">Vote Tuesday, Nov 3</span>
                                             </Link>
                                         </Button>
                                     </div>
+                                    <Button
+                                        asChild
+                                        size="lg"
+                                        variant="outline"
+                                        className="h-10.5 rounded-xl px-6">
+                                        <Link href="/get-involved">
+                                            <span className="text-nowrap">Get Involved</span>
+                                        </Link>
+                                    </Button>
                                     <Button
                                         asChild
                                         size="lg"
