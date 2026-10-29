@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import RevealOnScroll from "@/components/features/RevealOnScroll";
 import { ExternalLink } from "lucide-react";
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata = {
-  title: "Endorsements | Michele W. Johnson for MD House of Delegates",
+export const metadata = pageMetadata({
+  title: 'Endorsements | Michele W. Johnson for MD House of Delegates',
   description:
-    "Leaders and organizations across District 37B and Maryland standing with Michele W. Johnson.",
-  alternates: { canonical: "/endorsements" },
-};
+    'Leaders and organizations across District 37B and Maryland standing with Michele W. Johnson.',
+  path: '/endorsements',
+})
 
 const endorsements = [
   {

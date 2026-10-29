@@ -2,13 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import JsonLd from '@/components/json-ld'
+import { pageMetadata } from '@/lib/page-metadata'
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'About Michele — Michele W. Johnson for Delegate',
   description:
     'Learn about Michele W. Johnson, candidate for Maryland House of Delegates District 37B.',
-  alternates: { canonical: '/about' },
-}
+  path: '/about',
+})
 
 const personJsonLd = {
   '@context': 'https://schema.org',

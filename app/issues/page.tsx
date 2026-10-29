@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Shield, Heart, TrendingUp, Leaf, Users } from 'lucide-react'
 import { issues } from '@/data/issues'
 import ContactForm from '@/components/features/ContactForm'
+import { pageMetadata } from '@/lib/page-metadata'
 
 const iconMap: Record<string, React.ReactNode> = {
   Shield: <Shield className="size-5" />,
@@ -11,12 +12,12 @@ const iconMap: Record<string, React.ReactNode> = {
   Users: <Users className="size-5" />,
 }
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Issues — Michele W. Johnson for Delegate',
   description:
     "Michele W. Johnson's platform for Maryland House of Delegates District 37B.",
-  alternates: { canonical: '/issues' },
-}
+  path: '/issues',
+})
 
 export default function IssuesPage() {
   return (
