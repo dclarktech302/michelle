@@ -5,6 +5,7 @@ import { HeroHeader } from '@/components/header'
 import Footer from '@/components/footer'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import JsonLd from '@/components/json-ld'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({
@@ -13,11 +14,21 @@ const playfair = Playfair_Display({
   weight: ['400', '600', '700'],
 })
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Friends of Michele W. Johnson 37B',
+  url: 'https://www.michelewjohnson.com',
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://www.michelewjohnson.com'),
   title: "Michele W. Johnson for MD House of Delegates",
   description:
     "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Michele W. Johnson for MD House of Delegates",
     description: "Fighting for District 37B — Talbot, Caroline, Dorchester, and Wicomico Counties.",
@@ -40,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="shore">
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+        <JsonLd data={organizationJsonLd} />
         <HeroHeader />
         <main>{children}</main>
         <Footer />

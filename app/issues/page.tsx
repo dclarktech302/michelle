@@ -15,11 +15,12 @@ export const metadata = {
   title: 'Issues — Michele W. Johnson for Delegate',
   description:
     "Michele W. Johnson's platform for Maryland House of Delegates District 37B.",
+  alternates: { canonical: '/issues' },
 }
 
 export default function IssuesPage() {
   return (
-    <main className="pt-32 pb-20">
+    <div className="pt-32 pb-20">
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
@@ -68,6 +69,6 @@ export default function IssuesPage() {
         </div>
 
       </div>
-    </main>
+    </div>
   )
 }

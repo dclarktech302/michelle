@@ -5,11 +5,12 @@ export const metadata = {
   title: 'Gallery — Michele W. Johnson for Delegate',
   description:
     'Photos from the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
+  alternates: { canonical: '/gallery' },
 }
 
 export default function GalleryPage() {
   return (
-    <main className="pt-32 pb-20">
+    <div className="pt-32 pb-20">
       <div className="mx-auto max-w-5xl px-6">
 
         <div className="text-center mb-16">
@@ -28,6 +29,6 @@ export default function GalleryPage() {
         )}
 
       </div>
-    </main>
+    </div>
   )
 }
