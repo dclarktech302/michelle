@@ -109,15 +109,6 @@ export const HeroHeader = () => {
                                     Get Involved
                                 </Link>
                             </Button>
-
-                            <Button asChild size="sm">
-                                <a
-                                    href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    Donate
-                                </a>
-                            </Button>
                         </div>
 
                         {/* Mobile hamburger */}
@@ -171,15 +162,6 @@ export const HeroHeader = () => {
                                     onClick={() => setMenuState(false)}>
                                     Get Involved
                                 </Link>
-                            </Button>
-                            <Button asChild size="sm">
-                                <a
-                                    href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    onClick={() => setMenuState(false)}>
-                                    Donate
-                                </a>
                             </Button>
                         </div>
                     </div>

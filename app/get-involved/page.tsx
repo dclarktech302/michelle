@@ -1,12 +1,11 @@
 import VolunteerForm from '@/components/features/volunteerForm'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 import { pageMetadata } from '@/lib/page-metadata'
 
 export const metadata = pageMetadata({
   title: 'Get Involved — Michele W. Johnson for Delegate',
   description:
-    'Volunteer, host a house party, request a yard sign, or donate to the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
+    'Volunteer, host a house party, or request a yard sign with the Michele W. Johnson campaign for Maryland House of Delegates District 37B.',
   path: '/get-involved',
 })
 
@@ -57,27 +56,6 @@ export default function GetInvolvedPage() {
                   </span>
                 </li>
               </ul>
-            </div>
-
-            <div className="rounded-2xl border bg-muted/30 p-6 space-y-4">
-              <h2 className="text-xl font-semibold">Donate</h2>
-              <p className="text-sm text-muted-foreground">
-                Your contribution directly funds canvassing, yard signs,
-                and outreach across District 37B.
-              </p>
-              <Button asChild size="lg" className="w-full">
-                <a
-                  href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Donate Now via ActBlue
-                </a>
-              </Button>
-              <div className="text-xs text-muted-foreground space-y-1 pt-2 border-t">
-                <p className="font-medium text-foreground text-sm">Donate by check</p>
-                <p>Payable to Friends of Michele W. Johnson 37B</p>
-                <p>PO Box 183, Trappe MD 21673</p>
-              </div>
             </div>
 
             <div className="space-y-2">
