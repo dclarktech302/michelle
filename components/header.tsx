@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
+import { ELECTION_PHASE } from '@/lib/election-phase'
 
 const menuItems = [
     { name: 'About', href: '/about' },
@@ -12,7 +13,7 @@ const menuItems = [
     { name: 'Events', href: '/events' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Get Involved', href: '/get-involved' },
-    { name: 'How to Vote', href: '/vote' },
+    { name: ELECTION_PHASE === 'after' ? 'Thank You' : 'How to Vote', href: '/vote' },
 ]
 
 const FacebookIcon = () => (

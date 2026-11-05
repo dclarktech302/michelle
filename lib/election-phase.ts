@@ -7,7 +7,7 @@
  */
 export type ElectionPhase = 'before' | 'election-day' | 'after'
 
-export const ELECTION_PHASE: ElectionPhase = 'before'
+export const ELECTION_PHASE: ElectionPhase = 'after'
 
 export const POLLING_URL = 'https://voterservices.elections.maryland.gov/PollingPlaceSearch'
 export const OFFICIAL_RESULTS_URL = 'https://elections.maryland.gov/'
