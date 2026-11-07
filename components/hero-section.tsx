@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { TextEffect } from '@/components/ui/text-effect'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
-import { ELECTION_PHASE, POLLING_URL } from '@/lib/election-phase'
+import { ELECTION_PHASE, GET_INVOLVED_LABEL, POLLING_URL } from '@/lib/election-phase'
 
 const transitionVariants = {
     item: {
@@ -155,7 +155,7 @@ export default function HeroSection() {
                                             </div>
                                             <Button asChild size="lg" variant="outline" className="h-10.5 rounded-xl px-6">
                                                 <Link href="/get-involved">
-                                                    <span className="text-nowrap">Get Involved</span>
+                                                    <span className="text-nowrap">{GET_INVOLVED_LABEL}</span>
                                                 </Link>
                                             </Button>
                                         </>

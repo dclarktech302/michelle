@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import JsonLd from '@/components/json-ld'
 import { pageMetadata } from '@/lib/page-metadata'
+import { GET_INVOLVED_LABEL } from '@/lib/election-phase'
 
 export const metadata = pageMetadata({
   title: 'About Michele — Michele W. Johnson for Delegate',
@@ -48,7 +49,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-4 space-y-3">
               <Button asChild size="lg" className="w-full">
-                <Link href="/get-involved">Get Involved</Link>
+                <Link href="/get-involved">{GET_INVOLVED_LABEL}</Link>
               </Button>
             </div>
           </div>

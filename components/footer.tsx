@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { GET_INVOLVED_LABEL } from '@/lib/election-phase'
 
 const links = [
     { title: 'About', href: '/about' },
@@ -6,7 +7,7 @@ const links = [
     { title: 'Endorsements', href: '/endorsements' },
     { title: 'Events', href: '/events' },
     { title: 'Gallery', href: '/gallery' },
-    { title: 'Get Involved', href: '/get-involved' },
+    { title: GET_INVOLVED_LABEL, href: '/get-involved' },
 ]
 
 export default function FooterSection() {

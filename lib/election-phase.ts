@@ -9,5 +9,8 @@ export type ElectionPhase = 'before' | 'election-day' | 'after'
 
 export const ELECTION_PHASE: ElectionPhase = 'after'
 
+/** Label for the /get-involved link: the page becomes a thank-you / stay-connected page after the election. */
+export const GET_INVOLVED_LABEL = ELECTION_PHASE === 'after' ? 'Stay Connected' : 'Get Involved'
+
 export const POLLING_URL = 'https://voterservices.elections.maryland.gov/PollingPlaceSearch'
 export const OFFICIAL_RESULTS_URL = 'https://elections.maryland.gov/'
