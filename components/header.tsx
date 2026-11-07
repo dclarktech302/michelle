@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { ELECTION_PHASE } from '@/lib/election-phase'
+import { ELECTION_PHASE, GET_INVOLVED_LABEL } from '@/lib/election-phase'
 
 const menuItems = [
     { name: 'About', href: '/about' },
@@ -12,7 +12,7 @@ const menuItems = [
     { name: 'Endorsements', href: '/endorsements' },
     { name: 'Events', href: '/events' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Get Involved', href: '/get-involved' },
+    { name: GET_INVOLVED_LABEL, href: '/get-involved' },
     { name: ELECTION_PHASE === 'after' ? 'Thank You' : 'How to Vote', href: '/vote' },
 ]
 
@@ -106,7 +106,7 @@ export const HeroHeader = () => {
                                 size="sm"
                                 className={cn(isScrolled && 'hidden')}>
                                 <Link href="/get-involved">
-                                    Get Involved
+                                    {GET_INVOLVED_LABEL}
                                 </Link>
                             </Button>
                         </div>
@@ -160,7 +160,7 @@ export const HeroHeader = () => {
                                 <Link
                                     href="/get-involved"
                                     onClick={() => setMenuState(false)}>
-                                    Get Involved
+                                    {GET_INVOLVED_LABEL}
                                 </Link>
                             </Button>
                         </div>

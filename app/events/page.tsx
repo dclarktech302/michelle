@@ -253,7 +253,8 @@ export default function EventsPage() {
           </div>
         )}
 
-        {/* Stay connected */}
+        {/* Stay connected (hidden after the election) */}
+        {ELECTION_PHASE !== 'after' && (
         <div className="mt-16 rounded-2xl border bg-muted/30 p-8 text-center space-y-4">
           <h2 className="text-xl font-semibold font-heading">
             Want to host an event?
@@ -267,6 +268,7 @@ export default function EventsPage() {
             <Link href="/get-involved">Sign Up to Host</Link>
           </Button>
         </div>
+        )}
       </div>
     </div>
   );
