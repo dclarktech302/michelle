@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Button } from './ui/button'
 
 const links = [
     { title: 'About', href: '/about' },
@@ -52,23 +51,6 @@ export default function FooterSection() {
                             />
                         </svg>
                     </a>
-                </div>
-
-                <div className="my-8 text-center text-sm text-muted-foreground space-y-3">
-                    <p className="font-medium text-foreground">Support the Campaign</p>
-                    <Button asChild size="sm" className="w-full max-w-xs mx-auto flex justify-center">
-                        <a
-                            href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Donate Now via ActBlue
-                        </a>
-                    </Button>
-                    <div className="space-y-1 pt-2">
-                        <p className="font-medium text-foreground text-sm">Donate by check</p>
-                        <p>Payable to Friends of Michele W. Johnson 37B</p>
-                        <p>PO Box 183 · Trappe, MD 21673</p>
-                    </div>
                 </div>
 
                 <div className="text-center text-xs text-muted-foreground space-y-1 border-t pt-8 mt-8">

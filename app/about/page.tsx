@@ -48,14 +48,6 @@ export default function AboutPage() {
             </div>
             <div className="mt-4 space-y-3">
               <Button asChild size="lg" className="w-full">
-                <a
-                  href="https://secure.actblue.com/donate/michele-w--johnson-1"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Donate to the Campaign
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="w-full">
                 <Link href="/get-involved">Get Involved</Link>
               </Button>
             </div>
